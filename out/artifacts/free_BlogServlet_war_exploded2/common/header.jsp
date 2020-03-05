@@ -18,12 +18,11 @@
 
 </div>
 <ul id="nav">
-    <li><a href="#">Home</a></li>
+    <li><a href="#">HOME</a></li>
     <li><a href="#">Stories</a></li>
     <li><a href="#">Videos</a></li>
     <li><a href="#">Films</a></li>
     <li><a href="#">Podcasts</a></li>
-
 </ul>
 </body>
 </html>
