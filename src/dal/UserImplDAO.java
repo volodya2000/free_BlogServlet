@@ -1,6 +1,6 @@
 package dal;
 
-import entity.User;
+import entities.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
