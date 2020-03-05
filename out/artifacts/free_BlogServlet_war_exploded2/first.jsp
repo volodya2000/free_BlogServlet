@@ -14,7 +14,7 @@
 <h1>Testing JSP
 </h1>
 <p>
-<%="Hello world"%>
+    <%="Hello world"%>
 </p>
 </body>
 </html>
