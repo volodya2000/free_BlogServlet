@@ -8,21 +8,38 @@
 <%--<%@ page contentType="text/html;charset=UTF-8" language="java" %>--%>
 <html>
 <head>
-    <link rel="stylesheet" href="/css/nav.css" type="text/css" />
-    <title>Hello Page</title>
 
+    <link rel="stylesheet" href="../css/home_style.css" type="text/css" />
+    <title>Homepage of your news!</title>
+    <link rel="favicon" href="">
 
 </head>
 <body>
-<div class="logo">
+    <header>
+        <div id="container">
+            <div class="nav-bar-top">
+                <div class="logo">
+                    <a href=""><img src="../images/news-logo.png" alt="Logo"></a>
+                </div>
 
-</div>
-<ul id="nav">
-    <li><a href="#">HOME</a></li>
-    <li><a href="#">Stories</a></li>
-    <li><a href="#">Videos</a></li>
-    <li><a href="#">Films</a></li>
-    <li><a href="#">Podcasts</a></li>
-</ul>
+                <div class="navigation-bar">
+                    <nav>
+                        <ul>
+                            <li><a href="">Homepage</a></li>
+                            <li><a href="">Films</a></li>
+                            <li><a href="">Stories</a></li>
+                            <li><a href="">Sport</a></li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <a href="" class = "sign-in"><img src="../images/sign-in-icon.png" alt="Sign in"></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
 </body>
 </html>

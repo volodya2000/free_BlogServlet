@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    max-height: 900px; /*Temporary height*/
+}
+
+header #container{
+    width: 40%;
+    max-height: 900px; /*Tempo*/
+    margin: 0 auto;
+}
+
+#container .nav-bar-top{
+    width: 100%;
+    max-height: 120px;
+}
+
+#container .nav-bar-top .logo{
+    float: left;
+    padding: 10px 10px 10px 10px;
+}
+
+
+
+#container .navigation-bar .sign-in{
+    float: right;
+}
