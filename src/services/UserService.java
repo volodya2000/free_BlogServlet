@@ -1,14 +1,19 @@
 package services;
 
-import dal.UserImplDAO;
+import dal.UserDAOImpl;
+import dal.UserRolesDAO;
+import dal.UserRolesDAOImpl;
+import entities.Roles;
 import entities.User;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class UserService {
-    private UserImplDAO userImplDAO=new UserImplDAO();
+
+    private UserDAOImpl userDAOImpl =new UserDAOImpl();
     private List<User> userList=new ArrayList<>();
+    private UserRolesDAO userRolesDAO=new UserRolesDAOImpl();
 
     public UserService() {
 
@@ -16,28 +21,38 @@ public class UserService {
 
     public void addUser(User user)
     {
-        userImplDAO.insertUser(user);
+        userDAOImpl.insertUser(user);
+    }
+
+    public void addRole(User user,Roles role)
+    {
+        userRolesDAO.addRole(user,role);
+    }
+
+    public List<Roles> getUserRoles(User user)
+    {
+        return userRolesDAO.getUserRolesByUser(user);
     }
 
     public boolean deleteUser(int id)
     {
-        return userImplDAO.deleteUser(id);
+        return userDAOImpl.deleteUser(id);
     }
 
     public boolean updateUser(User user)
     {
-        return userImplDAO.updateUser(user);
+        return userDAOImpl.updateUser(user);
     }
 
     public List<User> findAll()
     {
-        userList=userImplDAO.getAllUsers();
+        userList= userDAOImpl.getAllUsers();
         return userList;
     }
 
     public User findByEmailAndPassword(String email,String password)
     {
-        return userImplDAO.getUserByUserEmailAndPassword(email,password);
+        return userDAOImpl.getUserByUserEmailAndPassword(email,password);
     }
 
 }

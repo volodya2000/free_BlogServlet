@@ -10,9 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-public class UserImplDAO implements UserDAO{
+public class UserDAOImpl implements UserDAO{
 
-    private static Logger logger=Logger.getLogger(UserImplDAO.class.toString());
+    private static Logger logger=Logger.getLogger(UserDAOImpl.class.toString());
 
     private ConnectionFactory connectionFactory=ConnectionFactory.getInstance();
 

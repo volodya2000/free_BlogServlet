@@ -1,6 +1,5 @@
 package controllers;
 
-import dal.UserImplDAO;
 import entities.User;
 import services.UserService;
 
