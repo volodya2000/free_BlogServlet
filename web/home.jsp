@@ -1,4 +1,4 @@
-<%@ page import="entities.User" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: vovan
   Date: 01.03.2020
@@ -15,7 +15,7 @@
 <jsp:include page="/common/header.jsp" />
 <%
     String sessionName=null;
-    sessionName=session.getId();
+    sessionName=(String)session.getAttribute("name");
     String userName=null;
     String sessionID=null;
 
@@ -30,7 +30,7 @@
     }
 
 %>
-<h1>Welcome to home <%=userName %>. Your JsessionID is <%=sessionID%>. Your sessionId is <%=sessionName%> </h1>
+<h1>Welcome to home <%=userName %>. Your sessionID is <%=sessionID%>. </h1>
 
 <form action="logout" method="post">
     <input type="submit" value="Logout" >

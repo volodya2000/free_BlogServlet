@@ -33,7 +33,7 @@ public class AuthenticationFilter implements Filter {
 //            dispatcher.forward(request, response);
             response.sendRedirect("login.jsp");
         }
-         else {
+        else {
             chain.doFilter(req, resp);
         }
     }
