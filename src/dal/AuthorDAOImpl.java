@@ -142,9 +142,13 @@ public class AuthorDAOImpl implements AuthorDAO {
         Connection connection=null;
         PreparedStatement statement=null;
 
-        final String sql = "DELETE FROM author WHERE author_id=?;";
+        final String sql = "DELETE author,publication " +
+                "FROM author INNER JOIN publication  ON publication.author_id =author.author_id" +
+                " WHERE author.author_id=?;";
 
-            try {
+
+
+        try {
                 logger.info("Creating connection!");
                 connection=ConnectionFactory.getConnection();
 

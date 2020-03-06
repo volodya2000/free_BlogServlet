@@ -7,15 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="230244af-18d2-4e5e-a150-db95ee370abd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/dal/PostDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dal/PostDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/Publication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/PostService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dal/PublicationDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dal/PublicationDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/PublicationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dal/AuthorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dal/AuthorDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dal/AuthorDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dal/AuthorDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dal/PostDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dal/PostDAOImpl.java" afterDir="false" />
     </list>
     <list id="002e35d6-06f7-4a7f-8da8-500b64edd6c7" name="Revert &quot;HttpAuthorization&quot;" comment="Revert &quot;HttpAuthorization&quot;&#10;&#10;This reverts commit 68d66f43">
       <change beforePath="$PROJECT_DIR$/src/filters/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/filters/AuthenticationFilter.java" afterDir="false" />
@@ -60,7 +58,7 @@
         <item name="servlet_db@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="servlet_db: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="post: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="publication: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -71,65 +69,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="uml://DATABASE/c2cc2ab0-09fe-4764-a257-03504a2a7347.TABLE:servlet_db.author">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>DATABASE</ID>
-              <OriginalElement>c2cc2ab0-09fe-4764-a257-03504a2a7347.TABLE:servlet_db.author</OriginalElement>
-              <nodes>
-                <node x="176.74999999999997" y="0.0">c2cc2ab0-09fe-4764-a257-03504a2a7347.TABLE:servlet_db.user</node>
-                <node x="0.0" y="188.0">c2cc2ab0-09fe-4764-a257-03504a2a7347.TABLE:servlet_db.author</node>
-                <node x="232.25" y="387.0">c2cc2ab0-09fe-4764-a257-03504a2a7347.TABLE:servlet_db.post_tages</node>
-                <node x="349.0" y="210.0">c2cc2ab0-09fe-4764-a257-03504a2a7347.TABLE:servlet_db.user_roles</node>
-                <node x="180.0" y="221.0">c2cc2ab0-09fe-4764-a257-03504a2a7347.TABLE:servlet_db.post</node>
-                <node x="43.5" y="376.0">c2cc2ab0-09fe-4764-a257-03504a2a7347.TABLE:servlet_db.publication</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="c2cc2ab0-09fe-4764-a257-03504a2a7347.TABLE:servlet_db.publication" target="c2cc2ab0-09fe-4764-a257-03504a2a7347.TABLE:servlet_db.post">
-                  <point x="36.5" y="-58.0" />
-                  <point x="153.0" y="351.0" />
-                  <point x="217.25" y="351.0" />
-                  <point x="-37.25" y="36.0" />
-                </edge>
-                <edge source="c2cc2ab0-09fe-4764-a257-03504a2a7347.TABLE:servlet_db.post_tages" target="c2cc2ab0-09fe-4764-a257-03504a2a7347.TABLE:servlet_db.post">
-                  <point x="0.0" y="-47.0" />
-                  <point x="37.25" y="36.0" />
-                </edge>
-                <edge source="c2cc2ab0-09fe-4764-a257-03504a2a7347.TABLE:servlet_db.publication" target="c2cc2ab0-09fe-4764-a257-03504a2a7347.TABLE:servlet_db.author">
-                  <point x="-36.5" y="-58.0" />
-                  <point x="0.0" y="69.0" />
-                </edge>
-                <edge source="c2cc2ab0-09fe-4764-a257-03504a2a7347.TABLE:servlet_db.user_roles" target="c2cc2ab0-09fe-4764-a257-03504a2a7347.TABLE:servlet_db.user">
-                  <point x="0.0" y="-47.0" />
-                  <point x="416.5" y="163.0" />
-                  <point x="284.0" y="163.0" />
-                  <point x="35.75" y="69.0" />
-                </edge>
-                <edge source="c2cc2ab0-09fe-4764-a257-03504a2a7347.TABLE:servlet_db.author" target="c2cc2ab0-09fe-4764-a257-03504a2a7347.TABLE:servlet_db.user">
-                  <point x="0.0" y="-69.0" />
-                  <point x="80.0" y="163.0" />
-                  <point x="212.49999999999997" y="163.0" />
-                  <point x="-35.75" y="69.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="145.5" y="220.0" />
-              <SelectedNodes>
-                <node>c2cc2ab0-09fe-4764-a257-03504a2a7347.TABLE:servlet_db.publication</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Key columns</Category>
-                <Category>Columns</Category>
-              </Categories>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dal/UserDAOImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/dal/PublicationDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1601">
-              <caret line="336" column="13" lean-forward="true" selection-start-line="336" selection-start-column="13" selection-end-line="336" selection-end-column="13" />
+            <state relative-caret-position="204">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -138,10 +81,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dal/AuthorDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1410">
+              <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dal/PublicationDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dal/PostDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+            <state relative-caret-position="102">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -152,20 +116,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dal/PostDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="266" lean-forward="true" selection-start-line="266" selection-end-line="266" />
+            <state relative-caret-position="-2109">
+              <caret line="116" column="13" lean-forward="true" selection-start-line="116" selection-start-column="13" selection-end-line="116" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entities/Post.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -247,10 +202,11 @@
         <option value="$PROJECT_DIR$/src/dal/UserDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/entities/Post.java" />
         <option value="$PROJECT_DIR$/src/entities/Publication.java" />
-        <option value="$PROJECT_DIR$/src/dal/AuthorDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/dal/AuthorDAO.java" />
         <option value="$PROJECT_DIR$/src/entities/Author.java" />
         <option value="$PROJECT_DIR$/src/dal/PostDAO.java" />
+        <option value="$PROJECT_DIR$/src/dal/PublicationDAO.java" />
+        <option value="$PROJECT_DIR$/src/dal/AuthorDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/dal/PostDAOImpl.java" />
       </list>
     </option>
@@ -731,7 +687,7 @@
       <workItem from="1581708046726" duration="1200000" />
       <workItem from="1581775727239" duration="35886000" />
       <workItem from="1583136529662" duration="31128000" />
-      <workItem from="1583362707630" duration="30435000" />
+      <workItem from="1583362707630" duration="33049000" />
     </task>
     <task id="LOCAL-00001" summary="HttpAuthorization">
       <created>1583362216274</created>
@@ -768,11 +724,18 @@
       <option name="project" value="LOCAL" />
       <updated>1583496334596</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Creating PostDAO. Implementation of PostDAO.">
+      <created>1583499892649</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1583499892649</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124978000" />
+    <option name="totallyTimeSpent" value="127592000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -787,17 +750,17 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8364888" visible="true" weight="0.29500756" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8363339" visible="true" weight="0.29500756" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Image Layers" order="6" />
-      <window_info id="Web" order="7" sideWeight="0.16351119" side_tool="true" visible="true" weight="0.29500756" />
+      <window_info id="Web" order="7" sideWeight="0.16366611" side_tool="true" visible="true" weight="0.29500756" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" visible="true" weight="0.049099836" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" weight="0.049099836" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" weight="0.24222586" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -809,7 +772,7 @@
       <window_info anchor="bottom" id="Messages" order="11" weight="0.30066445" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Changes" order="13" weight="0.3289689" />
-      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.4977307" weight="0.19639935" />
+      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.4977307" weight="0.2487725" />
       <window_info anchor="bottom" id="SQL Generator" order="15" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -817,7 +780,7 @@
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.19288956" />
+      <window_info anchor="right" id="Database" order="6" weight="0.4387292" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
@@ -870,20 +833,10 @@
     <MESSAGE value="HttpAuthorizationFinal" />
     <MESSAGE value="Creating and realization  UserRoleDAO." />
     <MESSAGE value="Creating AuthorDAO. Implementation of AuthorDAO." />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating AuthorDAO. Implementation of AuthorDAO." />
+    <MESSAGE value="Creating PostDAO. Implementation of PostDAO." />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating PostDAO. Implementation of PostDAO." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/jsp/login.jsp" />
-    <entry file="file://$PROJECT_DIR$/free_BlogServlet.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/common/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-49">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/common/footer.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1080,15 +1033,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://c2cc2ab0-09fe-4764-a257-03504a2a7347/schema/servlet_db/table/post_tages">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="24f1c761-6bd2-4a2c-95e2-00648cab9008">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://DATABASE/c2cc2ab0-09fe-4764-a257-03504a2a7347.TABLE:servlet_db.post_tages">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1174,16 +1118,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="53" lean-forward="true" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://c2cc2ab0-09fe-4764-a257-03504a2a7347/schema/servlet_db/table/author">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state projectRestartId="24f1c761-6bd2-4a2c-95e2-00648cab9008">
@@ -1200,41 +1134,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/AuthorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/Publication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-96">
-          <caret line="26" column="8" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1340#1341#0" expanded="true" />
-            <element signature="e#1370#1371#0" expanded="true" />
-            <element signature="e#1422#1423#0" expanded="true" />
-            <element signature="e#1460#1461#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dal/AuthorDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/AuthorDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-130">
-          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1321,23 +1224,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/PostService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/PostDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/entities/Post.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
@@ -1355,10 +1241,97 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/Publication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2">
+          <caret line="26" column="8" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32">
+          <caret line="15" column="53" lean-forward="true" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/PublicationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/PostService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/AuthorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/PublicationDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://c2cc2ab0-09fe-4764-a257-03504a2a7347/schema/servlet_db/table/post_tages">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="24f1c761-6bd2-4a2c-95e2-00648cab9008">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/AuthorDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1410">
+          <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/PostDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/PublicationDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/dal/PostDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="266" lean-forward="true" selection-start-line="266" selection-end-line="266" />
+        <state relative-caret-position="-2109">
+          <caret line="116" column="13" lean-forward="true" selection-start-line="116" selection-start-column="13" selection-end-line="116" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

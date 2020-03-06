@@ -120,7 +120,8 @@ public class PostDAOImpl implements PostDAO {
         Connection connection=null;
         PreparedStatement statement=null;
 
-        final String sql ="DELETE FROM post WHERE post_id=?;";
+        final String sql ="DELETE  post,publication FROM " +
+                "post INNER JOIN publication  on post.post_id = publication.post_id WHERE publication.post_id=?;";
 
         try {
             logger.info("Opening connection!");
