@@ -180,7 +180,7 @@ public class UserDAOImpl implements UserDAO{
     }
 
     @Override
-    public boolean insertUser(User user) {
+    public boolean addUser(User user) {
         final String sqlFirst = "INSERT INTO user (email,is_active,nickname,password)" +
                 "VALUES (?,?,?,?);";
 
@@ -293,7 +293,6 @@ public class UserDAOImpl implements UserDAO{
 
         Connection connection=null;
         PreparedStatement statement=null;
-        ResultSet resultSet=null;
 
         try{
             logger.info("Opening connection");

@@ -21,7 +21,7 @@ public class UserService {
 
     public void addUser(User user)
     {
-        userDAOImpl.insertUser(user);
+        userDAOImpl.addUser(user);
     }
 
     public void addRole(User user,Roles role)
@@ -31,7 +31,7 @@ public class UserService {
 
     public List<Roles> getUserRoles(User user)
     {
-        return userRolesDAO.getUserRolesByUser(user);
+        return userRolesDAO.getUserRolesById(user.getId());
     }
 
     public boolean deleteUser(int id)

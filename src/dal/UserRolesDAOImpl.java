@@ -63,48 +63,6 @@ public class UserRolesDAOImpl implements UserRolesDAO {
     }
 
 
-    @Override
-    public List<Roles> getUserRolesByUser(User user) {
-        Connection connection=null;
-        PreparedStatement statement=null;
-        ResultSet resultSet=null;
-        List<Roles> roles=new ArrayList<>();
-
-        final String sql="SELECT * FROM user_roles where user_id=?;";
-
-            try{
-                logger.info("Opening connection!");
-                connection=ConnectionFactory.getConnection();
-                try
-                {   logger.info("Creating prepared statement!");
-                    statement= connection.prepareStatement(sql);
-                    statement.setInt(1,user.getId());
-                    statement.execute();
-                    resultSet=statement.executeQuery();
-                    roles=extractRolesFromResultSet(resultSet);
-                    if(roles!=null)
-                    {
-                        return roles;
-                    }
-                }catch (SQLException ex)
-                {
-                    logger.info("Prepared statement error!");
-                    ex.printStackTrace();
-                }
-            }
-            finally {
-                try{
-                    logger.info("Closing connection!");
-                    connection.close();
-                }catch (SQLException ex)
-                {
-                    logger.info("Connection closing error!");
-                    ex.printStackTrace();
-                }
-            }
-
-            return null;
-    }
 
     @Override
     public void addRole(User user ,Roles roles) {
@@ -193,7 +151,7 @@ public class UserRolesDAOImpl implements UserRolesDAO {
         try {
             List<String> role=new ArrayList<>();
             while(rs.next()) {
-                role.add(rs.getString(2));
+                role.add(rs.getString(3));
             }
             for (String str:role) {
                 if(str.equals("ADMIN")||str.equals("USER"))
