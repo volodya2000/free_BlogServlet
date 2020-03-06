@@ -1,5 +1,8 @@
 package entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Author {
 
     private int id;
@@ -11,6 +14,8 @@ public class Author {
     private String name;
 
     private String surname;
+
+    private List<Post> authorPublication = new ArrayList<>();
 
 
     public Author() {
@@ -69,5 +74,13 @@ public class Author {
 
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    public List<Post> getAuthorPublication() {
+        return authorPublication;
+    }
+
+    public void setAuthorPost(List<Post> authorPublication) {
+        this.authorPublication = authorPublication;
     }
 }

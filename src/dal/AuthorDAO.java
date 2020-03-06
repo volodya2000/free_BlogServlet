@@ -2,6 +2,7 @@ package dal;
 
 import entities.Author;
 import entities.Post;
+import entities.Publication;
 import entities.User;
 
 import java.util.List;
