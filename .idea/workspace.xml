@@ -7,13 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="230244af-18d2-4e5e-a150-db95ee370abd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dal/PublicationDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dal/PublicationDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/PublicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dal/AuthorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dal/AuthorDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dal/AuthorDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dal/AuthorDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dal/PostDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dal/PostDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dal/PostDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dal/PostDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dal/PublicationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dal/PublicationDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dal/PublicationDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dal/PublicationDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dal/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dal/UserDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dal/UserRolesDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dal/UserRolesDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Publication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Publication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/filters/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/filters/AuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/AuthorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/AuthorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/PublicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/PublicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/UserService.java" afterDir="false" />
     </list>
     <list id="002e35d6-06f7-4a7f-8da8-500b64edd6c7" name="Revert &quot;HttpAuthorization&quot;" comment="Revert &quot;HttpAuthorization&quot;&#10;&#10;This reverts commit 68d66f43">
       <change beforePath="$PROJECT_DIR$/src/filters/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/filters/AuthenticationFilter.java" afterDir="false" />
@@ -53,13 +62,6 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="servlet_db: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="servlet_db@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="servlet_db: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="publication: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -71,20 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dal/PublicationDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dal/AuthorDAOImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1410">
-              <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
+            <state relative-caret-position="170">
+              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -95,17 +85,46 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dal/PublicationDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+            <state relative-caret-position="1753">
+              <caret line="116" column="21" lean-forward="true" selection-start-line="116" selection-start-column="21" selection-end-line="116" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3941#3942#0" expanded="true" />
+                <element signature="e#3969#3970#0" expanded="true" />
+                <element signature="e#4025#4026#0" expanded="true" />
+                <element signature="e#4053#4054#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/services/PostService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#225#226#0" expanded="true" />
+                <element signature="e#271#272#0" expanded="true" />
+                <element signature="e#302#303#0" expanded="true" />
+                <element signature="e#339#340#0" expanded="true" />
+                <element signature="e#370#371#0" expanded="true" />
+                <element signature="e#408#409#0" expanded="true" />
+                <element signature="e#442#443#0" expanded="true" />
+                <element signature="e#482#483#0" expanded="true" />
+                <element signature="e#509#510#0" expanded="true" />
+                <element signature="e#548#549#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dal/PostDAO.java">
+        <entry file="file://$PROJECT_DIR$/src/services/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+            <state relative-caret-position="272">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,11 +132,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/dal/PostDAOImpl.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/services/AuthorService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2109">
-              <caret line="116" column="13" lean-forward="true" selection-start-line="116" selection-start-column="13" selection-end-line="116" selection-end-column="13" />
+            <state relative-caret-position="424">
+              <caret line="34" column="59" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/services/PublicationService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -160,7 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/first.jsp" />
         <option value="$PROJECT_DIR$/src/HelloServlet.java" />
         <option value="$PROJECT_DIR$/src/controller/RegistrationServlet.java" />
@@ -189,27 +219,39 @@
         <option value="$PROJECT_DIR$/src/controllers/LoginServlet.java" />
         <option value="$PROJECT_DIR$/src/controllers/LogoutServlet.java" />
         <option value="$PROJECT_DIR$/web/home.jsp" />
-        <option value="$PROJECT_DIR$/src/filters/AuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/dal/ConnectionFactory.java" />
         <option value="$PROJECT_DIR$/web/login.jsp" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/src/dal/UserRolesDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/dal/UserRolesDAO.java" />
         <option value="$PROJECT_DIR$/src/entities/Roles.java" />
-        <option value="$PROJECT_DIR$/src/services/UserService.java" />
         <option value="$PROJECT_DIR$/src/dal/UserDAO.java" />
-        <option value="$PROJECT_DIR$/src/dal/UserDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/entities/Post.java" />
-        <option value="$PROJECT_DIR$/src/entities/Publication.java" />
-        <option value="$PROJECT_DIR$/src/dal/AuthorDAO.java" />
         <option value="$PROJECT_DIR$/src/entities/Author.java" />
-        <option value="$PROJECT_DIR$/src/dal/PostDAO.java" />
+        <option value="$PROJECT_DIR$/src/filters/AuthenticationFilter.java" />
+        <option value="$PROJECT_DIR$/src/dal/UserRolesDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/dal/PublicationDAO.java" />
+        <option value="$PROJECT_DIR$/src/dal/UserDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/entities/Publication.java" />
+        <option value="$PROJECT_DIR$/src/dal/PublicationDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/services/UserService.java" />
+        <option value="$PROJECT_DIR$/src/dal/AuthorDAO.java" />
+        <option value="$PROJECT_DIR$/src/services/AuthorService.java" />
+        <option value="$PROJECT_DIR$/src/dal/PostDAO.java" />
         <option value="$PROJECT_DIR$/src/dal/AuthorDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/dal/PostDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/services/PostService.java" />
+        <option value="$PROJECT_DIR$/src/services/PublicationService.java" />
       </list>
     </option>
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/filters/AuthenticationFilter.java">
+      <ranges>
+        <range start1="28" end1="29" start2="28" end2="29" changelist="230244af-18d2-4e5e-a150-db95ee370abd" />
+        <range start1="45" end1="45" start2="45" end2="46" changelist="002e35d6-06f7-4a7f-8da8-500b64edd6c7" />
+      </ranges>
+    </file>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -219,9 +261,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="878" />
-    <option name="height" value="735" />
+    <option name="x" value="6" />
+    <option name="y" value="34" />
+    <option name="width" value="1346" />
+    <option name="height" value="688" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -297,7 +340,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/Рабочий стол/Инвест анализ/admin_panel" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/Task3" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -687,7 +730,7 @@
       <workItem from="1581708046726" duration="1200000" />
       <workItem from="1581775727239" duration="35886000" />
       <workItem from="1583136529662" duration="31128000" />
-      <workItem from="1583362707630" duration="33049000" />
+      <workItem from="1583362707630" duration="44362000" />
     </task>
     <task id="LOCAL-00001" summary="HttpAuthorization">
       <created>1583362216274</created>
@@ -731,11 +774,18 @@
       <option name="project" value="LOCAL" />
       <updated>1583499892649</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Correct deletion from AuthorDB and PostDB.">
+      <created>1583502589533</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1583502589533</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127592000" />
+    <option name="totallyTimeSpent" value="138905000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -750,14 +800,49 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8363339" visible="true" weight="0.29500756" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8366013" visible="true" weight="0.29500756" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Image Layers" order="6" />
-      <window_info id="Web" order="7" sideWeight="0.16366611" side_tool="true" visible="true" weight="0.29500756" />
+      <window_info id="Web" order="7" sideWeight="0.1633987" side_tool="true" weight="0.29500756" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4969743" weight="0.17839608" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" weight="0.24222586" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.049099836" />
+      <window_info anchor="bottom" id="Database Console" order="7" weight="0.43535188" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3289689" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5030257" side_tool="true" weight="0.17839608" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.30066445" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.3289689" />
+      <window_info anchor="bottom" id="Database Changes" order="13" weight="0.3289689" />
+      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.4977307" weight="0.2487725" />
+      <window_info anchor="bottom" id="SQL Generator" order="15" weight="0.3289689" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.16868381" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8366013" visible="true" weight="0.29500756" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Image Layers" order="6" />
+      <window_info id="Web" order="7" sideWeight="0.1633987" side_tool="true" visible="true" weight="0.29500756" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" weight="0.049099836" />
@@ -772,7 +857,7 @@
       <window_info anchor="bottom" id="Messages" order="11" weight="0.30066445" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Changes" order="13" weight="0.3289689" />
-      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.4977307" weight="0.2487725" />
+      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.4977307" visible="true" weight="0.2487725" />
       <window_info anchor="bottom" id="SQL Generator" order="15" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -783,7 +868,7 @@
       <window_info anchor="right" id="Database" order="6" weight="0.4387292" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -834,7 +919,8 @@
     <MESSAGE value="Creating and realization  UserRoleDAO." />
     <MESSAGE value="Creating AuthorDAO. Implementation of AuthorDAO." />
     <MESSAGE value="Creating PostDAO. Implementation of PostDAO." />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating PostDAO. Implementation of PostDAO." />
+    <MESSAGE value="Correct deletion from AuthorDB and PostDB." />
+    <option name="LAST_COMMIT_MESSAGE" value="Correct deletion from AuthorDB and PostDB." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/web/common/footer.jsp">
@@ -944,16 +1030,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/filters/AuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="28" column="64" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1108,16 +1184,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/UserRolesDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="73" column="55" selection-start-line="73" selection-start-column="55" selection-end-line="73" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://c2cc2ab0-09fe-4764-a257-03504a2a7347/schema/servlet_db/table/author">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state projectRestartId="24f1c761-6bd2-4a2c-95e2-00648cab9008">
@@ -1134,17 +1200,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/AuthorDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/controllers/LoginServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        <state relative-caret-position="-419">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/Author.java">
+    <entry file="file://$PROJECT_DIR$/src/filters/AuthenticationFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+        <state relative-caret-position="331">
+          <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1153,18 +1222,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dal/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        <state relative-caret-position="119">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/LoginServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/dal/UserRolesDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-419">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="-830">
+          <caret line="108" column="33" selection-start-line="108" selection-start-column="33" selection-end-line="108" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/Publication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="56" column="40" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/UserDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="349" column="22" selection-start-line="349" selection-start-column="22" selection-end-line="349" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/Author.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://c2cc2ab0-09fe-4764-a257-03504a2a7347/schema/servlet_db/table/post_tages">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="24f1c761-6bd2-4a2c-95e2-00648cab9008">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/AuthorDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="58" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/Post.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/PostDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1213,9 +1348,9 @@
               <point x="-35.75" y="69.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="145.5" y="220.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="148.0" y="207.5" />
           <SelectedNodes>
-            <node>c2cc2ab0-09fe-4764-a257-03504a2a7347.TABLE:servlet_db.publication</node>
+            <node>c2cc2ab0-09fe-4764-a257-03504a2a7347.TABLE:servlet_db.author</node>
           </SelectedNodes>
           <Categories>
             <Category>Key columns</Category>
@@ -1224,97 +1359,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/Post.java">
+    <entry file="file://$PROJECT_DIR$/src/dal/PostDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/UserDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1601">
-          <caret line="336" column="13" lean-forward="true" selection-start-line="336" selection-start-column="13" selection-end-line="336" selection-end-column="13" />
+        <state relative-caret-position="5729">
+          <caret line="337" lean-forward="true" selection-start-line="337" selection-end-line="337" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/Publication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2">
-          <caret line="26" column="8" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-32">
-          <caret line="15" column="53" lean-forward="true" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/PublicationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/PostService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/AuthorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/PublicationDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://c2cc2ab0-09fe-4764-a257-03504a2a7347/schema/servlet_db/table/post_tages">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="24f1c761-6bd2-4a2c-95e2-00648cab9008">
-          <filtering>
-            <filter text="" />
-          </filtering>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dal/AuthorDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1410">
-          <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
+        <state relative-caret-position="189">
+          <caret line="24" column="43" lean-forward="true" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/PostDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/dal/PublicationDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        <state relative-caret-position="170">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1323,17 +1391,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dal/PublicationDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        <state relative-caret-position="1753">
+          <caret line="116" column="21" lean-forward="true" selection-start-line="116" selection-start-column="21" selection-end-line="116" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3941#3942#0" expanded="true" />
+            <element signature="e#3969#3970#0" expanded="true" />
+            <element signature="e#4025#4026#0" expanded="true" />
+            <element signature="e#4053#4054#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/PostDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/services/PublicationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2109">
-          <caret line="116" column="13" lean-forward="true" selection-start-line="116" selection-start-column="13" selection-end-line="116" selection-end-column="13" />
+        <state relative-caret-position="255">
+          <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/AuthorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="34" column="59" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/PostService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#225#226#0" expanded="true" />
+            <element signature="e#271#272#0" expanded="true" />
+            <element signature="e#302#303#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#370#371#0" expanded="true" />
+            <element signature="e#408#409#0" expanded="true" />
+            <element signature="e#442#443#0" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#548#549#0" expanded="true" />
           </folding>
         </state>
       </provider>

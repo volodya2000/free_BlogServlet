@@ -7,25 +7,25 @@ public class Publication {
 
     private int id;
 
-    private int user_id;
+    private int post_id;
 
     private int author_id;
 
-    private Date dateOfCreation;
+    private String dateOfCreation;
 
     private List<Author> authors;
 
     public Publication(){}
 
-    public Publication(int user_id, int author_id, Date dateOfCreation) {
-        this.user_id = user_id;
+    public Publication(int post_id, int author_id, String dateOfCreation) {
+        this.post_id = post_id;
         this.author_id = author_id;
         this.dateOfCreation = dateOfCreation;
     }
 
-    public Publication(int id, int user_id, int author_id, Date dateOfCreation) {
+    public Publication(int id, int post_id, int author_id, String dateOfCreation) {
         this.id = id;
-        this.user_id = user_id;
+        this.post_id = post_id;
         this.author_id = author_id;
         this.dateOfCreation = dateOfCreation;
     }
@@ -38,13 +38,9 @@ public class Publication {
         this.id = id;
     }
 
-    public int getUser_id() {
-        return user_id;
-    }
+    public int getPost_id() { return post_id; }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
-    }
+    public void setPost_id(int post_id) { this.post_id = post_id; }
 
     public int getAuthor_id() {
         return author_id;
@@ -54,11 +50,11 @@ public class Publication {
         this.author_id = author_id;
     }
 
-    public Date getDateOfCreation() {
+    public String getDateOfCreation() {
         return dateOfCreation;
     }
 
-    public void setDateOfCreation(Date dateOfCreation) {
+    public void setDateOfCreation(String dateOfCreation) {
         this.dateOfCreation = dateOfCreation;
     }
 

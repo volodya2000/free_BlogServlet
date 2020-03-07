@@ -154,7 +154,7 @@ public class UserRolesDAOImpl implements UserRolesDAO {
                 role.add(rs.getString(3));
             }
             for (String str:role) {
-                if(str.equals("ADMIN")||str.equals("USER"))
+                if(str.equals("ADMIN")||str.equals("USER")|| str.equals("MODERATOR"))
                 {
                     roles.add(Roles.valueOf(str));
                 }

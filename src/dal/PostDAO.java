@@ -1,5 +1,6 @@
 package dal;
 
+import entities.Author;
 import entities.Post;
 
 import java.util.List;
@@ -11,4 +12,5 @@ public interface PostDAO {
     boolean deletePost(int id);
     boolean updatePost(Post post);
     List<Post> getAll();
+    List<Author>getAuthorsByPostId(int id);
 }

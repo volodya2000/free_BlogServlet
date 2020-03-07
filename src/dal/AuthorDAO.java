@@ -11,7 +11,7 @@ public interface AuthorDAO {
 
     List<Post> getAllPublicationsByAuthorId(int id);
     int getNumberOfPublicationsByAuthorId(int id);
-    boolean addAuthor(User user,Author futureAuthor);
+    boolean addAuthor(User user,String name,String surname);
     boolean deleteAuthor(int id);
     boolean updateAuthor(Author author);
     Author getAuthorById(int id);

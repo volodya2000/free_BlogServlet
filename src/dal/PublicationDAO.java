@@ -7,6 +7,7 @@ import java.util.List;
 public interface PublicationDAO {
 
     List<Publication> getAll();
-    boolean createPublication();
+    boolean addPublication(int postId,int authorId);
     boolean deletePublication();
+    boolean updatePublication();
 }

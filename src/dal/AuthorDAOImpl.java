@@ -19,8 +19,58 @@ public class AuthorDAOImpl implements AuthorDAO {
 
     @Override
     public List<Post> getAllPublicationsByAuthorId(int id) {
+        Connection connection=null;
+        PreparedStatement statement=null;
+        ResultSet resultSet=null;
+        List<Post> posts=new ArrayList<>();
 
-        return null;
+        final String sql="SELECT * FROM post " +
+                "INNER JOIN publication p on post.post_id = p.post_id WHERE p.author_id=?;";
+
+        try
+        {
+            logger.info("Opening connection!");
+            connection=ConnectionFactory.getConnection();
+            try {
+                logger.info("Creating statement!");
+                statement = connection.prepareStatement(sql);
+                statement.setInt(1, id);
+                statement.execute();
+                resultSet = statement.executeQuery();
+                while(resultSet.next())
+                {
+                    posts.add(extractPostFromResultSet(resultSet));
+                }
+                return posts;
+            }catch (SQLException ex)
+            {
+                ex.printStackTrace();
+            }
+            finally {
+                try{
+                    logger.info("Closing statement!");
+                    statement.close();
+                }
+                catch (SQLException ex)
+                {
+                    logger.info("Closing statement error!");
+                    ex.printStackTrace();
+                }
+            }
+        }
+        finally {
+            try{
+                logger.info("Closing connection!");
+                connection.close();
+            }catch (SQLException ex)
+            {
+                logger.info("Closing connection error!");
+                ex.printStackTrace();
+            }
+
+
+            return null;
+    }
     }
 
     @Override
@@ -78,7 +128,7 @@ public class AuthorDAOImpl implements AuthorDAO {
     }
 
     @Override
-    public boolean addAuthor(User user , Author futureAuthor) {
+    public boolean addAuthor(User user,String name,String surname) {
 
         Connection connection=null;
         PreparedStatement statement=null;
@@ -96,14 +146,14 @@ public class AuthorDAOImpl implements AuthorDAO {
                     statement=connection.prepareStatement(sql);
                     statement.setInt(1,user.getId());
                     statement.setInt(2,0);
-                    statement.setString(3,futureAuthor.getName());
-                    statement.setString(4,futureAuthor.getSurname());
+                    statement.setString(3,name);
+                    statement.setString(4,surname);
                     statement.execute();
                     int result =statement.executeUpdate();
                     if(result==1)
                     {
                         logger.info("Author with name: "+
-                                futureAuthor.getName()+ " is created!");
+                                name+ " is created!");
                         return true;
                     }
                 }catch (SQLException ex)
@@ -353,6 +403,20 @@ public class AuthorDAOImpl implements AuthorDAO {
             author.setName(rs.getString("name"));
             author.setSurname(rs.getString("surname"));
             return author;
+        }catch (SQLException ex)
+        {
+            ex.printStackTrace();
+        }
+        return null;
+    }
+
+    private Post extractPostFromResultSet(ResultSet rs) throws SQLException {
+
+        try {
+            Post post = new Post();
+            post.setId(rs.getInt("post_id"));
+            post.setNameOfPost(rs.getString("post_name"));
+            return post;
         }catch (SQLException ex)
         {
             ex.printStackTrace();

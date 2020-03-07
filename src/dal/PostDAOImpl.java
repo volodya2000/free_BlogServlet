@@ -1,5 +1,6 @@
 package dal;
 
+import entities.Author;
 import entities.Post;
 
 import java.sql.Connection;
@@ -130,7 +131,7 @@ public class PostDAOImpl implements PostDAO {
                     logger.info("Creating statement!");
                     statement=connection.prepareStatement(sql);
                     statement.setInt(1,id);
-                    return statement.executeUpdate()==1?true:false;
+                    return statement.executeUpdate()==1;
                 }catch (SQLException ex)
                 {
                     ex.printStackTrace();
@@ -174,7 +175,7 @@ public class PostDAOImpl implements PostDAO {
                 statement=connection.prepareStatement(sql);
                 statement.setString(1,post.getNameOfPost());
                 statement.setInt(2,post.getId());
-                return statement.executeUpdate()==1?true:false;
+                return statement.executeUpdate()==1;
             }catch (SQLException ex)
             {
                 ex.printStackTrace();
@@ -248,6 +249,75 @@ public class PostDAOImpl implements PostDAO {
                 }
             }
 
+        return null;
+    }
+
+    @Override
+    public List<Author> getAuthorsByPostId(int id) {
+        Connection connection=null;
+        PreparedStatement statement=null;
+        ResultSet resultSet=null;
+        List<Author>authors= new ArrayList<>();
+
+        final String sql ="SELECT * FROM author INNER " +
+                "JOIN publication p on author.author_id = p.author_id WHERE p.post_id =?;";
+
+        try{
+            logger.info("Opening connection!");
+            connection=ConnectionFactory.getConnection();
+            try {
+                logger.info("Creating statement!");
+                statement=connection.prepareStatement(sql);
+                statement.setInt(1,id);
+                statement.execute();
+                resultSet=statement.executeQuery();
+                while(resultSet.next())
+                {
+                    authors.add(extractAuthorFromResultSet(resultSet));
+                }
+                return authors;
+            }catch (SQLException ex)
+            {
+
+                ex.printStackTrace();
+            }finally {
+                try{
+                    logger.info("Closing statement!");
+                    statement.close();
+                }catch (SQLException ex)
+                {
+                    logger.info("Closing statement error!");
+                    ex.printStackTrace();
+                }
+            }
+        }finally {
+            try {
+                logger.info("Closing connection!");
+                connection.close();
+            } catch (SQLException ex)
+            {
+                logger.info("Closing connection error!");
+                ex.printStackTrace();
+            }
+        }
+
+        return null;
+    }
+
+    private Author extractAuthorFromResultSet(ResultSet rs) throws SQLException {
+
+        try {
+            Author author = new Author();
+            author.setId(rs.getInt("author_id"));
+            author.setUser_id(rs.getInt("user_id"));
+            author.setNumberOfPublication(rs.getInt("num_publications"));
+            author.setName(rs.getString("name"));
+            author.setSurname(rs.getString("surname"));
+            return author;
+        }catch (SQLException ex)
+        {
+            ex.printStackTrace();
+        }
         return null;
     }
 

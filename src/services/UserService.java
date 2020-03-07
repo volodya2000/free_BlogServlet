@@ -13,7 +13,7 @@ public class UserService {
 
     private UserDAOImpl userDAOImpl =new UserDAOImpl();
     private List<User> userList=new ArrayList<>();
-    private UserRolesDAO userRolesDAO=new UserRolesDAOImpl();
+    private UserRolesDAOImpl userRolesDAO=new UserRolesDAOImpl();
 
     public UserService() {
 
