@@ -8,10 +8,7 @@
 <%--<%@ page contentType="text/html;charset=UTF-8" language="java" %>--%>
 <html>
 <head>
-    <link rel="stylesheet" href="/css/nav.css" type="text/css" />
-    <title>Hello Page</title>
-
-
+    <link rel="stylesheet" href="/css/main.css" type="text/css" />
 </head>
 <body>
 <div class="logo">

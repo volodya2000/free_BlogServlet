@@ -8,11 +8,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <jsp:include page="common/header.jsp"/>
+
+
     <link rel="stylesheet" href="css/login.css" type="text/css" />
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+
     <title>Login Page</title>
 </head>
 <body>
+<div class="header">
+    <jsp:include page="common/header.jsp"/>
+</div>
 <H1>helloword</H1>
 <div class="wrapper">
 
@@ -24,7 +30,7 @@
     <br>
     <input type="submit" value="Login">
 </form>
-
+    <a href="registration.jsp">Don`t have an account? Please,click registrate.</a>
     <div class="footer">
 <jsp:include page="common/footer.jsp"/>
     </div>
