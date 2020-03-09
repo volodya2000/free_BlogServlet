@@ -8,18 +8,28 @@
 <%--<%@ page contentType="text/html;charset=UTF-8" language="java" %>--%>
 <html>
 <head>
-    <link rel="stylesheet" href="/css/main.css" type="text/css" />
+
 </head>
 <body>
-<div class="logo">
-
-</div>
-<ul id="nav">
-    <li><a href="#">About Us</a></li>
-    <li><a href="#">Our Products</a></li>
-    <li><a href="#">FAQs</a></li>
-    <li><a href="#">Contact</a></li>
-    <li><a href="#">Login</a></li>
-</ul>
+<header class="main-head">
+    <div class="logo">
+        <a href=""></a>
+    </div>
+    <nav class="main-nav">
+        <ul class="nav-bar">
+            <li><a href="all_users.jsp">Nav 1</a></li>
+            <li><a href="">Nav 2</a></li>
+            <li><a href="">Nav 3</a></li>
+            <li><a href="">Nav 4</a></li>
+            <li><a href="">Nav 5</a>
+                <ul class="inner-list">
+                    <li><a href="#">Themes</a></li>
+                    <li><a href="#">Plugins</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
 </body>
 </html>

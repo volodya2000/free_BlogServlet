@@ -65,7 +65,7 @@ public class UserRolesDAOImpl implements UserRolesDAO {
 
 
     @Override
-    public void addRole(User user ,Roles roles) {
+    public void addRole(int userId ,Roles roles) {
 
         Connection connection=null;
         PreparedStatement statement=null;
@@ -79,11 +79,12 @@ public class UserRolesDAOImpl implements UserRolesDAO {
             try
             {   logger.info("Creating prepared statement!");
                 statement= connection.prepareStatement(sql);
-                statement.setInt(1,user.getId());
+                statement.setInt(1,userId);
                 statement.setString(2,roles.name());
                 statement.execute();
                 logger.info("User with role "+roles.name()+" is" +
                             "added!");
+
             }catch (SQLException ex)
             {
                 logger.info("Prepared statement error!");

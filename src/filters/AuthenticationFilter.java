@@ -26,7 +26,8 @@ public class AuthenticationFilter implements Filter {
 
         //HttpSession httpSession=request.getSession(false);
         if((request.getSession(true).getAttribute("User")==null) && !(uri.equals("/login.jsp")
-                ||uri.equals("/login") || uri.contains("/css/")||uri.equals("/registration.jsp")) )
+                ||uri.equals("/login") || uri.contains("/css/")||uri.equals("/registration.jsp")
+        ||uri.equals("/registration") ||uri.equals("/grid.jsp")) )
         {
             logger.info("Unauthorized request");
 //            RequestDispatcher dispatcher =request.getRequestDispatcher("login.jsp");

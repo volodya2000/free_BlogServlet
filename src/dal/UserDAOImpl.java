@@ -1,5 +1,6 @@
 package dal;
 
+import com.mysql.jdbc.Statement;
 import entities.User;
 
 import java.sql.Connection;
@@ -22,7 +23,7 @@ public class UserDAOImpl implements UserDAO{
         PreparedStatement statement=null;
         ResultSet resultSet=null;
 
-        final String sql ="SELECT FROM user where user_id =?;";
+        final String sql ="SELECT * FROM user where user_id =?;";
             try {
                 logger.info("Opening connection!");
                 connection=ConnectionFactory.getConnection();
@@ -194,23 +195,34 @@ public class UserDAOImpl implements UserDAO{
             connection=ConnectionFactory.getConnection();
                 try
                 {   logger.info("Creating prepared statement!");
-                    statement= connection.prepareStatement(sqlFirst);
+                    statement= connection.prepareStatement(sqlFirst,Statement.RETURN_GENERATED_KEYS);
                     statement.setString(1,user.getEmail());
                     statement.setBoolean(2,user.getActive());
                     statement.setString(3,user.getNickname());
                     statement.setString(4,user.getPassword());
-                    statement.execute();
                     int result =statement.executeUpdate();
-                    resultSet=statement.executeQuery();
+                    try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
+                        if (generatedKeys.next()) {
+                            user.setId(generatedKeys.getInt(1));
+                            logger.warning("USER ID == "+user.getId());
+                        }
+                        else {
+                            throw new SQLException("Creating user failed, no ID obtained.");
+                        }
+                    }
                     if(result==1)
                     {
                         return true;
                     }
-                        try {
-                            logger.info("Get result set!");
-                            logger.info("User with email "+user.getEmail()+" is" +
-                                    "created!");
-                        }finally {
+                    logger.info("Get result set!");
+                    logger.info("User with email "+user.getEmail()+" is" +
+                            "created!");
+
+                        }
+                    catch (SQLException ex) {
+                            ex.printStackTrace();
+                    }
+                    finally {
                             try {
                                 if (resultSet != null) {
                                     resultSet.close();
@@ -221,11 +233,6 @@ public class UserDAOImpl implements UserDAO{
                                 ex.printStackTrace();
                             }
                         }
-                }catch (SQLException ex)
-                {
-                    logger.info("Prepared statement error!");
-                    ex.printStackTrace();
-                }
 
         }finally {
                 try {
@@ -315,6 +322,8 @@ public class UserDAOImpl implements UserDAO{
                     }
                 }
                 catch (SQLException exc){
+                    exc.printStackTrace();
+                }finally {
                     try {
                         logger.info("Closing statement!");
                         statement.close();
@@ -339,9 +348,63 @@ public class UserDAOImpl implements UserDAO{
         return false;
     }
 
+    @Override
+    public boolean isExist(String email) {
+        Connection connection=null;
+        PreparedStatement statement =null;
+        ResultSet resultSet=null;
+        User user=null;
+
+        final String sql ="SELECT * FROM user WHERE email=?;";
+
+            try{
+                logger.info("Opening connection isExist!");
+                connection=ConnectionFactory.getConnection();
+                    try{
+                        logger.info("Creating statement isExist!");
+                        statement=connection.prepareStatement(sql);
+                        statement.setString(1,email);
+                        statement.execute();
+                        resultSet=statement.executeQuery();
+                        while(resultSet.next())
+                        {
+                            user=extractUserFromResultSet(resultSet);
+                        }
+                        if(user!=null)
+                        {
+                            return true;
+                        }
+                    }catch (SQLException ex)
+                    {
+                        ex.printStackTrace();
+                    }finally {
+                        try{
+                            logger.info("Closing statement isExist");
+                            statement.close();
+                        }catch (SQLException ex) {
+                            logger.info("Closing statement error isExist!");
+                            ex.printStackTrace();
+                        }
+                    }
+            }
+            finally {
+                try{
+                    logger.info("Closing connection isExist!");
+                    connection.close();
+                }catch (SQLException ex)
+                {
+                    logger.info("Closing connection error isExist!");
+                    ex.printStackTrace();
+                }
+            }
+
+        return false;
+    }
+
     private User extractUserFromResultSet(ResultSet rs) throws SQLException {
 
         try {
+            logger.info("getting result from ResultSet");
             User user = new User();
             user.setId(rs.getInt("user_id"));
             user.setEmail(rs.getString("email"));

@@ -24,9 +24,9 @@ public class UserService {
         userDAOImpl.addUser(user);
     }
 
-    public void addRole(User user,Roles role)
+    public void addRole(int userId,Roles role)
     {
-        userRolesDAO.addRole(user,role);
+        userRolesDAO.addRole(userId,role);
     }
 
     public List<Roles> getUserRoles(User user)
@@ -55,4 +55,9 @@ public class UserService {
         return userDAOImpl.getUserByUserEmailAndPassword(email,password);
     }
 
+    public boolean isExist(String email)
+        { return userDAOImpl.isExist(email);}
 }
+
+
+

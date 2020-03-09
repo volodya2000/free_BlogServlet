@@ -8,28 +8,30 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <jsp:include page="common/header.jsp"/>
-    <link rel="stylesheet" href="css/login.css" type="text/css" />
     <link rel="stylesheet" href="css/main.css" type="text/css" />
     <title>Registration Page</title>
 </head>
 <body>
 <div class="wrapper">
+    <jsp:include page="common/header.jsp"/>
+    <div class="content">
+        <div class="main-content">
+            <form class="registration" action="registration" method="post">
 
-    <form action="registration" method="post">
-            <fieldset>
-                <legend>Контактная информация</legend>
-                <p><label for="name">Имя <em>*</em></label><input type="text" id="name" name="nickname"></p>
-                <p><label for="email">E-mail</label><input type="email"id="email" name="email"></p>
-                <p><label for="password">E-mail</label><input type="password"id="password" name="password"></p>
-            </fieldset>
-            <p><input type="submit" value="Отправить"></p>
+    <div><label for="email">Email</label>
+        <input type="email" name="email" id="email"></div>
+    <div><label for="username">Username</label>
+        <input type="text" name="nickname" id="username"></div>
+    <div><label for="password">Password</label>
+        <input type="password" name="password" id="password"></div>
 
-    </form>
-
-    <div class="footer">
-        <jsp:include page="common/footer.jsp"/>
+    <div class="actions">
+        <input type="submit" name="registrate" value="Registrate"> <a href="login.jsp">Do you have an account? Please, sign in.</a>
     </div>
+</form>
+        </div>
+    </div>
+    <jsp:include page="common/footer.jsp"/>
 </div>
 </body>
 </html>

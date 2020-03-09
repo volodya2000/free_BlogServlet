@@ -9,8 +9,7 @@ public interface UserRolesDAO {
 
     List<Roles> getUserRolesById(int id);
 
-    void addRole(User user,Roles roles);
-    
+    void addRole(int userId,Roles roles);
 
     void deleteRole(User user,Roles role);
 }

@@ -7,6 +7,12 @@
         <element id="directory" name="classes">
           <element id="module-output" name="free_BlogServlet" />
         </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$USER_HOME$/Downloads/jstl jars/taglibs-standard-impl-1.2.5.jar" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/jstl jars/taglibs-standard-spec-1.2.5.jar" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/jstl jars/taglibs-standard-jstlel-1.2.5.jar" />
+          <element id="library" level="application" name="jstl" />
+        </element>
       </element>
     </root>
   </artifact>

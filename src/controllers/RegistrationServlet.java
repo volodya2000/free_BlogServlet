@@ -1,14 +1,13 @@
 package controllers;
 
+import entities.Roles;
 import entities.User;
 import services.UserService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Logger;
@@ -28,7 +27,6 @@ public class RegistrationServlet extends HttpServlet {
         String nickname =request.getParameter("nickname");
         String email=request.getParameter("email");
         String password=request.getParameter("password");
-        boolean isAlreadyExist=true;
 
         String errorMsg = null;
         User user=null;
@@ -45,17 +43,34 @@ public class RegistrationServlet extends HttpServlet {
         }
 
         if (errorMsg != null) {
-            RequestDispatcher rd = getServletContext().getRequestDispatcher("/login.jsp");
+            RequestDispatcher rd = getServletContext().getRequestDispatcher("/registration.jsp");
             PrintWriter out = response.getWriter();
             out.println("<font color=red>" + errorMsg + "</font>");
             rd.include(request, response);
 
         }else
-            user=new User(email,true,nickname,password);
-//            if()
-//            {
-//
-//            }
+            if(!userService.isExist(email))
+            {
+                user=new User(email,true,nickname,password);
+                userService.addUser(user);
+                logger.warning("USERID= "+user.getId());
+                userService.addRole(user.getId(), Roles.USER);
+                HttpSession session = request.getSession();
+                session.setAttribute("User", user);
+                session.setMaxInactiveInterval(30*60);
+
+                Cookie loginCookie = new Cookie("user_cookie",user.getNickname());
+                loginCookie.setMaxAge(10*60);
+                response.addCookie(loginCookie);
+                response.sendRedirect(request.getRequestURI()+"/home.jsp");
+            }else
+            {
+                RequestDispatcher requestDispatcher=getServletContext().getRequestDispatcher("/registration.jsp");
+                PrintWriter printWriter =response.getWriter();
+                printWriter.println("<font color=red> User found with given email "+email+" is exist </font>");
+                requestDispatcher.include(request, response);
+
+            }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import java.util.logging.Logger;
 
 @WebServlet(name = "login")
@@ -53,13 +54,15 @@ public class LoginServlet extends HttpServlet {
                 Cookie loginCookie = new Cookie("user_cookie",user.getNickname());
                 loginCookie.setMaxAge(30*60);
                 response.addCookie(loginCookie);
+                List<User> users=userService.findAll();
+                request.setAttribute("users",users);
                 response.sendRedirect("home.jsp");
             }else
             {
                 RequestDispatcher requestDispatcher=getServletContext().getRequestDispatcher("/login.jsp");
                 PrintWriter out= response.getWriter();
                 logger.warning("User not found with email="+email);
-                out.println("<font color=red>No user found with given email id, please register first.</font>");
+                out.println("<font color=red>No user found with given email id, please register first. </font>");
                 requestDispatcher.include(request, response);
             }
         }

@@ -12,7 +12,6 @@
     <title>Home Page</title>
 </head>
 <body>
-<jsp:include page="/common/header.jsp" />
 <%
     String sessionName=null;
     sessionName=(String)session.getAttribute("name");
@@ -30,11 +29,18 @@
     }
 
 %>
-<h1>Welcome to home <%=userName %>. Your sessionID is <%=sessionID%>. </h1>
-
-<form action="logout" method="post">
-    <input type="submit" value="Logout" >
-</form>
-<jsp:include page="/common/footer.jsp" />
+<div class="wrapper">
+    <jsp:include page="common/header.jsp"/>
+    <div class="content">
+        <div class="main-content">
+            <form class="logout" action="logout" method="post">
+                <div class="actions">
+                    <input type="submit" name="login" value="Login">
+                </div>
+            </form>
+        </div>
+    </div>
+    <jsp:include page="common/footer.jsp"/>
+</div>
 </body>
 </html>
