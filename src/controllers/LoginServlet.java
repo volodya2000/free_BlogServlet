@@ -1,9 +1,11 @@
 package controllers;
 
+import dal.UserRolesDAOImpl;
 import entities.User;
 import services.UserService;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
@@ -12,10 +14,11 @@ import java.io.PrintWriter;
 import java.util.List;
 import java.util.logging.Logger;
 
-@WebServlet(name = "login")
+@WebServlet(name = "login" ,urlPatterns ="/login")
 public class LoginServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
+
 
     private UserService userService=new UserService();
 
@@ -27,6 +30,9 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
         String errorMsg = null;
         User user=null;
+        logger.info("Context path: "+request.getContextPath());
+        logger.info("Servlet path"+request.getServletPath());
+        logger.info("URI: "+request.getRequestURI());
 
         if (email == null || email.equals("")) {
             errorMsg = "User Email can't be null or empty";
@@ -46,6 +52,7 @@ public class LoginServlet extends HttpServlet {
         {
             if((user=userService.findByEmailAndPassword(email,password))!=null)
             {
+                user.setRolesList(userService.getUserRoles(user));
                 logger.info("User found with details="+user);
                 HttpSession session = request.getSession();
                 session.setAttribute("User", user);
@@ -55,8 +62,8 @@ public class LoginServlet extends HttpServlet {
                 loginCookie.setMaxAge(30*60);
                 response.addCookie(loginCookie);
                 List<User> users=userService.findAll();
-                request.setAttribute("users",users);
-                response.sendRedirect("home.jsp");
+                getServletContext().setAttribute("users",users);
+                response.sendRedirect("/home.jsp");
             }else
             {
                 RequestDispatcher requestDispatcher=getServletContext().getRequestDispatcher("/login.jsp");
@@ -68,6 +75,9 @@ public class LoginServlet extends HttpServlet {
         }
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.sendRedirect("/login.jsp");
+
+        RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher(request.getContextPath()+"/login.jsp");
+
+        dispatcher.forward(request, response);
     }
 }

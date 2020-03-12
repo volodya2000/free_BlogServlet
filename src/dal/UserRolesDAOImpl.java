@@ -25,7 +25,7 @@ public class UserRolesDAOImpl implements UserRolesDAO {
         ResultSet resultSet=null;
         List<Roles>roles=new ArrayList<>();
 
-        final String sql ="SELECT * FROM user_roles where user_id=?;";
+        final String sql ="SELECT roles FROM user_roles where user_id=?;";
 
         try{
             logger.info("Open connection");
@@ -152,7 +152,7 @@ public class UserRolesDAOImpl implements UserRolesDAO {
         try {
             List<String> role=new ArrayList<>();
             while(rs.next()) {
-                role.add(rs.getString(3));
+                role.add(rs.getString(1));
             }
             for (String str:role) {
                 if(str.equals("ADMIN")||str.equals("USER")|| str.equals("MODERATOR"))

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core_1_1" %>
 <%--
   Created by IntelliJ IDEA.
   User: vovan
@@ -8,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
     <title>Home Page</title>
 </head>
 <body>
@@ -29,15 +30,16 @@
     }
 
 %>
+
 <div class="wrapper">
-    <jsp:include page="common/header.jsp"/>
+        <jsp:include page="common/header.jsp"/>
     <div class="content">
         <div class="main-content">
-            <form class="logout" action="logout" method="post">
-                <div class="actions">
-                    <input type="submit" name="login" value="Login">
-                </div>
-            </form>
+
+            <c:forEach items="${users}" var="dept">
+                <h3>${dept.getNickname()}</h3>
+
+            </c:forEach>
         </div>
     </div>
     <jsp:include page="common/footer.jsp"/>

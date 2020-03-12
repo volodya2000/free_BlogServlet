@@ -1,8 +1,11 @@
 package entities;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class User {
+public class User implements Serializable {
+
+    private static final long serialVersionUID = 2041275512219239990L;
 
     private int id;
 
@@ -79,4 +82,5 @@ public class User {
     public List<Roles> getRolesList() { return rolesList; }
 
     public void setRolesList(List<Roles> rolesList) { this.rolesList = rolesList; }
+
 }

@@ -18,14 +18,14 @@
 <body>
 
 <div class="wrapper">
-    <jsp:include page="common/header.jsp"/>
+<%--    <jsp:include page="common/header.jsp"/>--%>
     <div class="content">
         <div class="main-content">
 
 
                 <div class="grid">
 
-                    <form action="login" method="post" class="form login">
+                    <form action="${pageContext.request.contextPath}/login" method="post" class="form login">
 
                         <header class="login__header">
                             <h3 class="login__title">Login</h3>

@@ -1,4 +1,5 @@
-<%--
+<%@ page import="entities.User" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: vovan
   Date: 01.03.2020
@@ -6,6 +7,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%--<%@ page contentType="text/html;charset=UTF-8" language="java" %>--%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
 
@@ -15,17 +17,26 @@
     <div class="logo">
         <a href=""></a>
     </div>
+    <% User users =(User)request.getAttribute("User");
+        request.setAttribute("User",users);
+    %>
     <nav class="main-nav">
         <ul class="nav-bar">
-            <li><a href="all_users.jsp">Nav 1</a></li>
-            <li><a href="">Nav 2</a></li>
-            <li><a href="">Nav 3</a></li>
-            <li><a href="">Nav 4</a></li>
-            <li><a href="">Nav 5</a>
-                <ul class="inner-list">
-                    <li><a href="#">Themes</a></li>
-                    <li><a href="#">Plugins</a></li>
-                    <li><a href="#">Tutorials</a></li>
+            <li><a href="/all_users.jsp">News</a></li>
+            <li><a href="">Find news</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Ukraine</a></li>
+            <li><a href="">Account</a>
+                <ul class="inner-list" >
+                    <li><a href="profile" id="profile">Profile</a></li>
+                    <li><a href="#" id="settings">Plugins</a></li>
+                    <li id="logout">
+                        <form class="logout" action="logout" method="post">
+                            <div class="actions">
+                                <input type="submit" name="Logout" value="Logout">
+                            </div>
+                        </form>
+                    </li>
                 </ul>
             </li>
         </ul>

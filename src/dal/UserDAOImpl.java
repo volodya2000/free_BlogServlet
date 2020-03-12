@@ -130,7 +130,7 @@ public class UserDAOImpl implements UserDAO{
         Connection connection=null;
         PreparedStatement statement=null;
         ResultSet resultSet=null;
-
+        User user=null;
         final String sql = "SELECT * FROM user WHERE email=?  and password=? ;";
 
         try{
@@ -139,13 +139,14 @@ public class UserDAOImpl implements UserDAO{
 
                     try {
                         logger.info("Creating statement getUserByEmail!");
-                        statement=connection.prepareStatement(sql);
+                        statement= connection.prepareStatement(sql);
                         statement.setString(1,email);
                         statement.setString(2,password);
                         resultSet=statement.executeQuery();
                         if(resultSet.next())
                         {
-                            return extractUserFromResultSet(resultSet);
+                            user=extractUserFromResultSet(resultSet);
+                            return user;
                         }
                     }
                     catch (SQLException ex)

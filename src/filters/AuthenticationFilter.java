@@ -17,7 +17,9 @@ public class AuthenticationFilter implements Filter {
     public void destroy() {
     }
 
-    public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
+
+        @Override
+        public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
         HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) resp;
 
@@ -27,7 +29,7 @@ public class AuthenticationFilter implements Filter {
         //HttpSession httpSession=request.getSession(false);
         if((request.getSession(true).getAttribute("User")==null) && !(uri.equals("/login.jsp")
                 ||uri.equals("/login") || uri.contains("/css/")||uri.equals("/registration.jsp")
-        ||uri.equals("/registration") ||uri.equals("/grid.jsp")) )
+        ||uri.equals("/registration")))
         {
             logger.info("Unauthorized request");
 //            RequestDispatcher dispatcher =request.getRequestDispatcher("login.jsp");
