@@ -16,7 +16,6 @@ public class UserService {
     private UserRolesDAOImpl userRolesDAO=new UserRolesDAOImpl();
 
     public UserService() {
-
     }
 
     public void addUser(User user)
@@ -29,10 +28,7 @@ public class UserService {
         userRolesDAO.addRole(userId,role);
     }
 
-    public List<Roles> getUserRoles(User user)
-    {
-        return userRolesDAO.getUserRolesById(user.getId());
-    }
+    public List<Roles> getUserRoles(User user) { return userRolesDAO.getUserRolesById(user.getId()); }
 
     public boolean deleteUser(int id)
     {
@@ -51,12 +47,11 @@ public class UserService {
     }
 
     public User findByEmailAndPassword(String email,String password)
-    {
-        return userDAOImpl.getUserByUserEmailAndPassword(email,password);
-    }
+    { return userDAOImpl.getUserByUserEmailAndPassword(email,password); }
 
-    public boolean isExist(String email)
-        { return userDAOImpl.isExist(email);}
+    public User findUserByNickname(String nickname) {return userDAOImpl.getUserByNickname(nickname);}
+
+    public boolean isExist(String email) { return userDAOImpl.isExist(email);}
 }
 
 

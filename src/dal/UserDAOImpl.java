@@ -69,6 +69,59 @@ public class UserDAOImpl implements UserDAO{
         return null;
     }
 
+    @Override
+    public User getUserByNickname(String nickname) {
+
+        Connection connection=null;
+        PreparedStatement statement=null;
+        ResultSet resultSet =null;
+        User user = null;
+
+        final String sql="SELECT  * FROM  user WHERE nickname=?;";
+            try{
+                logger.info("Opening connection");
+                connection=ConnectionFactory.getConnection();
+                try {
+                    logger.info("Creating statement");
+                    statement=connection.prepareStatement(sql);
+                    statement.setString(1,nickname);
+                    resultSet=statement.executeQuery();
+                    if(resultSet.next())
+                    {
+                        user=extractUserFromResultSet(resultSet);
+                        if(user!=null&&user.getNickname().equals(nickname))
+                        {
+                            return user;
+                        }
+                    }
+                }catch (SQLException ex)
+                {
+                    ex.printStackTrace();
+                }
+                finally {
+                    try{
+                        logger.info("Closing statement");
+                        statement.close();
+                    }catch (SQLException ex)
+                    {
+                        logger.info("Closing statement error");
+                        ex.printStackTrace();
+                    }
+                }
+
+            }finally {
+                try{
+                    logger.info("Closing connection");
+                    connection.close();
+                }catch (SQLException ex)
+                {
+                    logger.info("Closing connection error!");
+                    ex.printStackTrace();
+                }
+            }
+
+            return null;
+    }
 
     @Override
     public List<User> getAllUsers() {
