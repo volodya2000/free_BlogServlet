@@ -69,7 +69,6 @@ public class UserRolesDAOImpl implements UserRolesDAO {
 
         Connection connection=null;
         PreparedStatement statement=null;
-       // ResultSet resultSet=null;
 
         final String sql ="INSERT INTO user_roles (user_id,roles) VALUES (?,?);";
 
@@ -111,7 +110,6 @@ public class UserRolesDAOImpl implements UserRolesDAO {
 
         Connection connection=null;
         PreparedStatement statement=null;
-        ResultSet resultSet=null;
 
         try{
             logger.info("Opening connection");

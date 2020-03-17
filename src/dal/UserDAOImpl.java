@@ -350,8 +350,8 @@ public class UserDAOImpl implements UserDAO{
     @Override
     public boolean deleteUser(int id) {
 
-        final String sql1="DELETE user,author FROM user INNER " +
-                "JOIN author ON author.user_id=user.user_id WHERE user.user_id=?;";
+//        final String sql1="DELETE user,author FROM user INNER " +
+//                "JOIN author ON author.user_id=user.user_id WHERE user.user_id=?;";
 
         final String sql2="DELETE user,user_roles FROM user INNER " +
                 "JOIN user_roles ON user.user_id=user_roles.user_id WHERE user.user_id=?;";
@@ -364,13 +364,13 @@ public class UserDAOImpl implements UserDAO{
             connection=ConnectionFactory.getConnection();
                 try{
                     logger.info("Creating statement!");
-                    statement=connection.prepareStatement(sql1);
-                    statement.setInt(1,id);
-                    int result1=statement.executeUpdate();
+//                    statement=connection.prepareStatement(sql1);
+//                    statement.setInt(1,id);
+//                    int result1=statement.executeUpdate();
                     statement=connection.prepareStatement(sql2);
                     int result2=statement.executeUpdate();
                     statement.setInt(1,id);
-                    if(result1==1 && result2==1)
+                    if(/*result1==1 &&*/ result2==1)
                     {
                         return true;
                     }
@@ -403,13 +403,13 @@ public class UserDAOImpl implements UserDAO{
     }
 
     @Override
-    public boolean isExist(String email) {
+    public boolean isExist(String email,String nickname) {
         Connection connection=null;
         PreparedStatement statement =null;
         ResultSet resultSet=null;
         User user=null;
 
-        final String sql ="SELECT * FROM user WHERE email=?;";
+        final String sql ="SELECT * FROM user WHERE email=? AND nickname=?;";
 
             try{
                 logger.info("Opening connection isExist!");
@@ -418,6 +418,7 @@ public class UserDAOImpl implements UserDAO{
                         logger.info("Creating statement isExist!");
                         statement=connection.prepareStatement(sql);
                         statement.setString(1,email);
+                        statement.setString(2,nickname);
                         statement.execute();
                         resultSet=statement.executeQuery();
                         while(resultSet.next())

@@ -1,6 +1,8 @@
 package controllers;
 
+import dal.UserDAOImpl;
 import dal.UserRolesDAOImpl;
+import entities.Roles;
 import entities.User;
 import services.UserService;
 
@@ -61,8 +63,6 @@ public class LoginServlet extends HttpServlet {
                 Cookie loginCookie = new Cookie("user_cookie",user.getNickname());
                 loginCookie.setMaxAge(30*60);
                 response.addCookie(loginCookie);
-                List<User> users=userService.findAll();
-                getServletContext().setAttribute("users",users);
                 response.sendRedirect("/home.jsp");
             }else
             {

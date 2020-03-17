@@ -49,9 +49,14 @@ public class UserService {
     public User findByEmailAndPassword(String email,String password)
     { return userDAOImpl.getUserByUserEmailAndPassword(email,password); }
 
-    public User findUserByNickname(String nickname) {return userDAOImpl.getUserByNickname(nickname);}
+    public User findUserByNickname(String nickname) {
+        User user =userDAOImpl.getUserByNickname(nickname);
+    //    user.setRolesList(userRolesDAO.getUserRolesById(user.getId()));
+        return user;
+    }
 
-    public boolean isExist(String email) { return userDAOImpl.isExist(email);}
+    public boolean isExist(String email,String nickname) { return userDAOImpl.isExist(email,nickname);}
+
 }
 
 

@@ -7,10 +7,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<style><%@include file="/css/main.css"%></style>
 <html>
 <head>
     <title>Admin Panel</title>
-    <link rel="stylesheet" href="css/main.css" type="text/css" />
 </head>
 <body>
 <div class="wrapper">

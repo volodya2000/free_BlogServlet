@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.logging.Logger;
 
-@WebServlet(name = "adminPanel",urlPatterns = {"/profile/moderate"})
+@WebServlet(name = "adminPanel",urlPatterns = {"/profile/moderate","/profile/logout","/profile/profile"})
 public class AdminPanelServlet extends HttpServlet {
 
     private UserService userService=new UserService();
@@ -27,12 +27,19 @@ public class AdminPanelServlet extends HttpServlet {
 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        if(request.getRequestURI().equals("/profile/logout"))
+        {
+            RequestDispatcher rd=getServletContext().getRequestDispatcher("/logout");
+            rd.include(request,response);
+        }
         User user;
+        user=(User)getServletContext().getAttribute("find_user");
         String makeAdmin,makeModerator,deleteUser;
+        logger.info("user"+user);
         makeAdmin=request.getParameter("makeAdmin");
         makeModerator=request.getParameter("makeModerator");
         deleteUser=request.getParameter("deleteUser");
-        List<String>moderate= Arrays.asList(makeAdmin,makeModerator,deleteUser);
         if((makeAdmin!=null&&deleteUser!=null)
                 ||(makeModerator!=null&&deleteUser!=null)||(makeAdmin==null&&deleteUser==null&&makeModerator==null))
         {
@@ -40,12 +47,17 @@ public class AdminPanelServlet extends HttpServlet {
             response.addCookie(failedOperation);
             request.setAttribute("fail","Error!");
             response.sendRedirect("/profile");
+        }else {
+            if(deleteUser!=null)
+            {
+                userService.deleteUser(user.getId());
+            }
         }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        RequestDispatcher rd=getServletContext().getRequestDispatcher("/adminPage.jsp");
-        rd.forward(request,response);
+//        RequestDispatcher rd=getServletContext().getRequestDispatcher("/adminPage.jsp");
+//        rd.include(request,response);
+        response.sendRedirect("/profile");
     }
 }

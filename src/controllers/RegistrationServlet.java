@@ -49,7 +49,7 @@ public class RegistrationServlet extends HttpServlet {
             rd.include(request, response);
 
         }else
-            if(!userService.isExist(email))
+            if(!userService.isExist(email,nickname))
             {
                 user=new User(email,true,nickname,password);
                 userService.addUser(user);

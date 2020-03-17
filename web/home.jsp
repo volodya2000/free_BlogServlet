@@ -35,11 +35,8 @@
         <jsp:include page="common/header.jsp"/>
     <div class="content">
         <div class="main-content">
+                <h3>${requestScope.users.getNickname()}</h3>
 
-            <c:forEach items="${users}" var="dept">
-                <h3>${dept.getNickname()}</h3>
-
-            </c:forEach>
         </div>
     </div>
     <jsp:include page="common/footer.jsp"/>

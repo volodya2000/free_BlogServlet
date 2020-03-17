@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.logging.Logger;
 
-@WebFilter(filterName = "ProfileFilter",urlPatterns = {"/profile/moderate"})
+@WebFilter(filterName = "ProfileFilter",urlPatterns = {"/profile/moderate","/profile/logout"})
 public class ProfileFilter implements Filter {
 
     private static Logger logger=Logger.getLogger(ProfileFilter.class.toString());
