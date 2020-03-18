@@ -12,4 +12,6 @@ public interface UserRolesDAO {
     void addRole(int userId,Roles roles);
 
     void deleteRole(User user,Roles role);
+
+    void deleteAllRoles(int userId);
 }

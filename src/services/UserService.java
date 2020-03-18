@@ -32,6 +32,7 @@ public class UserService {
 
     public boolean deleteUser(int id)
     {
+        userRolesDAO.deleteAllRoles(id);
         return userDAOImpl.deleteUser(id);
     }
 
@@ -51,7 +52,7 @@ public class UserService {
 
     public User findUserByNickname(String nickname) {
         User user =userDAOImpl.getUserByNickname(nickname);
-    //    user.setRolesList(userRolesDAO.getUserRolesById(user.getId()));
+       user.setRolesList(userRolesDAO.getUserRolesById(user.getId()));
         return user;
     }
 

@@ -6,21 +6,16 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="230244af-18d2-4e5e-a150-db95ee370abd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controllers/ProfileServlet.java" afterDir="false" />
+    <list default="true" id="230244af-18d2-4e5e-a150-db95ee370abd" name="Default Changelist" comment="Preview">
+      <change afterPath="$PROJECT_DIR$/web/confirm_moderate.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/userPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c2cc2ab0-09fe-4764-a257-03504a2a7347.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c2cc2ab0-09fe-4764-a257-03504a2a7347.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/AdminPanelServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AdminPanelServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/LogoutServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/RegistrationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dal/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dal/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dal/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dal/UserDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dal/UserRolesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dal/UserRolesDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dal/UserRolesDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dal/UserRolesDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/filters/ProfileFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/filters/ProfileFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/adminPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/adminPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/common/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/common/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.jsp" afterDir="false" />
     </list>
     <list id="002e35d6-06f7-4a7f-8da8-500b64edd6c7" name="Revert &quot;HttpAuthorization&quot;" comment="Revert &quot;HttpAuthorization&quot;&#10;&#10;This reverts commit 68d66f43">
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
@@ -31,6 +26,11 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -70,22 +70,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/services/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="288">
+              <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#763#764#0" expanded="true" />
-                <element signature="e#812#813#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dal/UserDAOImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/controllers/AdminPanelServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="356" column="88" lean-forward="true" selection-start-line="355" selection-start-column="27" selection-end-line="356" selection-end-column="88" />
+            <state relative-caret-position="78">
+              <caret line="86" column="38" lean-forward="true" selection-start-line="86" selection-start-column="38" selection-end-line="86" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,10 +92,26 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c2cc2ab0-09fe-4764-a257-03504a2a7347/console_3.sql">
+        <entry file="file://$PROJECT_DIR$/web/confirm_moderate.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+            <state relative-caret-position="425">
+              <caret line="43" column="67" lean-forward="true" selection-start-line="43" selection-start-column="67" selection-end-line="43" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://c2cc2ab0-09fe-4764-a257-03504a2a7347/schema/servlet_db/table/user_roles">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state projectRestartId="88189560-c734-4a1a-bd57-eafe0bbf31ed">
+              <filtering>
+                <filter text="" />
+              </filtering>
+              <column-attributes>
+                <column name="user_id" position="2" />
+                <column name="roles" position="3" />
+                <column name="user_roles_id" position="1" />
+              </column-attributes>
             </state>
           </provider>
         </entry>
@@ -146,13 +160,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/css/login.css" />
-        <option value="$PROJECT_DIR$/web/css/nav.css" />
         <option value="$PROJECT_DIR$/web/grid.jsp" />
         <option value="$PROJECT_DIR$/web/common/footer.jsp" />
         <option value="$PROJECT_DIR$/web/js/login.js" />
         <option value="$PROJECT_DIR$/web/registration.jsp" />
-        <option value="$PROJECT_DIR$/src/dal/UserRolesDAO.java" />
         <option value="$PROJECT_DIR$/web/news.jsp" />
         <option value="$PROJECT_DIR$/web/css/login-form.css" />
         <option value="$PROJECT_DIR$/src/controllers/TestServlet.java" />
@@ -188,15 +199,18 @@
         <option value="$PROJECT_DIR$/src/controllers/LogoutServlet.java" />
         <option value="$PROJECT_DIR$/web/adminPage.jsp" />
         <option value="$PROJECT_DIR$/src/controllers/ProfileServlet.java" />
-        <option value="$PROJECT_DIR$/src/controllers/AdminPanelServlet.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c2cc2ab0-09fe-4764-a257-03504a2a7347/console_2.sql" />
-        <option value="$PROJECT_DIR$/src/dal/UserRolesDAOImpl.java" />
         <option value="$PROJECT_DIR$/web/home.jsp" />
         <option value="$PROJECT_DIR$/src/controllers/LoginServlet.java" />
-        <option value="$PROJECT_DIR$/src/services/UserService.java" />
-        <option value="$PROJECT_DIR$/src/dal/UserDAOImpl.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c2cc2ab0-09fe-4764-a257-03504a2a7347/console_3.sql" />
+        <option value="$PROJECT_DIR$/src/dal/UserRolesDAO.java" />
+        <option value="$PROJECT_DIR$/src/dal/UserRolesDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/dal/UserDAOImpl.java" />
+        <option value="$PROJECT_DIR$/web/success_delete.jsp" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/src/services/UserService.java" />
+        <option value="$PROJECT_DIR$/src/controllers/AdminPanelServlet.java" />
+        <option value="$PROJECT_DIR$/web/confirm_moderate.jsp" />
       </list>
     </option>
   </component>
@@ -240,26 +254,14 @@
             <path>
               <item name="free_BlogServlet" type="b2602c69:ProjectViewProjectNode" />
               <item name="free_BlogServlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="dal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="free_BlogServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="free_BlogServlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="free_BlogServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="free_BlogServlet" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -269,7 +271,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="database.console.LAST_STATE" value="true" />
+    <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/tinymce_5.2.0/tinymce" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -670,6 +672,7 @@
       <workItem from="1581775727239" duration="35886000" />
       <workItem from="1583136529662" duration="31128000" />
       <workItem from="1583362707630" duration="188836000" />
+      <workItem from="1584475435728" duration="8969000" />
     </task>
     <task id="LOCAL-00001" summary="HttpAuthorization">
       <created>1583362216274</created>
@@ -755,11 +758,18 @@
       <option name="project" value="LOCAL" />
       <updated>1584194556139</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Preview">
+      <created>1584475624359</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1584475624359</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="283379000" />
+    <option name="totallyTimeSpent" value="292348000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -771,9 +781,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.78313255" visible="true" weight="0.2927383" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.78313255" visible="true" weight="0.2965204" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -783,12 +793,12 @@
       <window_info id="Web" order="7" sideWeight="0.21686748" side_tool="true" weight="0.2927383" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4969743" weight="0.31587562" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" weight="0.44680852" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4969743" visible="true" weight="0.18657938" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" weight="0.049099836" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.049099836" />
-      <window_info active="true" anchor="bottom" id="Database Console" order="7" visible="true" weight="0.43535188" />
+      <window_info anchor="bottom" id="Database Console" order="7" weight="0.43535188" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3289689" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5030257" side_tool="true" weight="0.17839608" />
@@ -803,7 +813,7 @@
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.12934947" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.123298034" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
@@ -898,9 +908,22 @@
     <MESSAGE value="Realized user registration. Created template of website(footer and header)" />
     <MESSAGE value="Correct obtaining roles from user. Add a text editor." />
     <MESSAGE value="Creating profile Filter. Give credentials to user via admin profile." />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating profile Filter. Give credentials to user via admin profile." />
+    <MESSAGE value="Preview" />
+    <option name="LAST_COMMIT_MESSAGE" value="Preview" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/controllers/AdminPanelServlet.java</url>
+          <line>29</line>
+          <properties class="controllers.AdminPanelServlet" method="doPost">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
         <watch expression="this.context" custom="javax.servlet.ServletConfig,controllers.ProfileServlet" />
@@ -909,27 +932,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/tinymce.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="41" column="56" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/userPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="31" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/css/logout.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1008,20 +1010,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/UserRolesDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="42" lean-forward="true" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/adminPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="25" column="72" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/mysql-connector-java-5.1.48.jar!/com/mysql/jdbc/Util.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="74">
@@ -1078,31 +1066,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/UserRolesDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="168" lean-forward="true" selection-start-line="168" selection-end-line="168" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c2cc2ab0-09fe-4764-a257-03504a2a7347/console_2.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1001#1002#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1276,9 +1243,92 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/RegistrationServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="72" column="13" lean-forward="true" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/UserRolesDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c2cc2ab0-09fe-4764-a257-03504a2a7347/console_3.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/AuthorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/CreatePostServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/UserRolesDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/UserDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1010">
+          <caret line="472" lean-forward="true" selection-start-line="472" selection-end-line="472" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1001#1002#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/adminPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-514">
+          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/ProfileServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
+        <state relative-caret-position="13">
           <caret line="38" column="17" lean-forward="true" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1288,37 +1338,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/AdminPanelServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/RegistrationServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="72" column="13" lean-forward="true" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#763#764#0" expanded="true" />
-            <element signature="e#812#813#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/UserDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="356" column="88" lean-forward="true" selection-start-line="355" selection-start-column="27" selection-end-line="356" selection-end-column="88" />
+        <state relative-caret-position="78">
+          <caret line="86" column="38" lean-forward="true" selection-start-line="86" selection-start-column="38" selection-end-line="86" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1327,7 +1348,7 @@
     </entry>
     <entry file="das://c2cc2ab0-09fe-4764-a257-03504a2a7347/schema/servlet_db/table/user_roles">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="24f1c761-6bd2-4a2c-95e2-00648cab9008">
+        <state projectRestartId="88189560-c734-4a1a-bd57-eafe0bbf31ed">
           <filtering>
             <filter text="" />
           </filtering>
@@ -1341,17 +1362,17 @@
     </entry>
     <entry file="das://c2cc2ab0-09fe-4764-a257-03504a2a7347/schema/servlet_db/table/user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="24f1c761-6bd2-4a2c-95e2-00648cab9008">
+        <state projectRestartId="88189560-c734-4a1a-bd57-eafe0bbf31ed">
           <filtering>
             <filter text="" />
           </filtering>
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c2cc2ab0-09fe-4764-a257-03504a2a7347/console_3.sql">
+    <entry file="file://$PROJECT_DIR$/web/confirm_moderate.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+        <state relative-caret-position="425">
+          <caret line="43" column="67" lean-forward="true" selection-start-line="43" selection-start-column="67" selection-end-line="43" selection-end-column="67" />
         </state>
       </provider>
     </entry>
