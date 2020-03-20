@@ -16,21 +16,24 @@ public class AuthorService {
     public void addAuthor(User user,String name,String surname)
         {authorDAO.addAuthor(user,name,surname);}
 
-    int getNumberOfPublicationsByAuthorId(int id)
+    public int getNumberOfPublicationsByAuthorId(int id)
          {return authorDAO.getNumberOfPublicationsByAuthorId(id);}
 
-    void deleteAuthor(int id)
-        {authorDAO.deleteAuthor(id);}
+    public void deleteAuthorByUserId(int id)
+        {authorDAO.deleteAuthorByUserId(id);}
 
-    void updateAuthor(Author author)
+    public void updateAuthor(Author author)
         {authorDAO.updateAuthor(author);}
 
-    Author getAuthorById(int id)
-        {return authorDAO.getAuthorById(id);}
+    public Author getAuthorByUserId(int id)
+        {return authorDAO.getAuthorByUserId(id);}
 
-    List<Author> getAll()
+    public List<Author> getAll()
         {return authorDAO.getAll();}
 
-    List<Post>getAllPublicationsByAuthorId(int id)
+    public List<Post>getAllPublicationsByAuthorId(int id)
         {return authorDAO.getAllPublicationsByAuthorId(id);}
+
+    public boolean isAuthorExist(int userId)
+    {return authorDAO.isAuthorExist(userId);}
 }

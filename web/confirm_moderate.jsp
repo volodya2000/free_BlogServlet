@@ -50,7 +50,7 @@
                 <p><c:out value="${requestScope.failed_moder_admin}">
                 </c:out></p>
             </c:if>
-            <a href="profile" >Go to profile menu!</a>
+            <a href="<c:url value = "/profile"/>" >Go to profile menu!</a>
             <div class="table">
                 <table border="1">
                     <tr>

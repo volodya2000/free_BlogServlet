@@ -28,15 +28,9 @@
             <li><a href="">Ukraine</a></li>
             <li><a href="">Account</a>
                 <ul class="inner-list" >
-                    <li><a href="profile" id="profile">Profile</a></li>
+                    <li><a href="/profile" id="profile">Profile</a></li>
                     <li><a href="#" id="settings">Plugins</a></li>
-                    <li id="logout">
-                        <form class="logout" action="logout" method="post">
-                            <div class="actions">
-                                <input type="submit" name="Logout" value="Logout">
-                            </div>
-                        </form>
-                    </li>
+                    <li><a href="/logout" id="logout">Logout</a></li>
                 </ul>
             </li>
         </ul>

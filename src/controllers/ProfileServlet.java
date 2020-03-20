@@ -49,7 +49,13 @@ public class ProfileServlet extends HttpServlet {
             url="/adminPage.jsp";
         }
         else{
-            url="/userPage.jsp";
+            if(roles.contains(Roles.MODERATOR))
+            {
+                url="/moderatorPage.jsp";
+            }
+            else{
+                url="/userPage.jsp" ;
+            }
         }
         RequestDispatcher rd=getServletContext().getRequestDispatcher(url);
         rd.forward(request,response);

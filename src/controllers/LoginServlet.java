@@ -32,8 +32,7 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
         String errorMsg = null;
         User user=null;
-        logger.info("Context path: "+request.getContextPath());
-        logger.info("Servlet path"+request.getServletPath());
+
         logger.info("URI: "+request.getRequestURI());
 
         if (email == null || email.equals("")) {
@@ -55,6 +54,7 @@ public class LoginServlet extends HttpServlet {
             if((user=userService.findByEmailAndPassword(email,password))!=null)
             {
                 user.setRolesList(userService.getUserRoles(user));
+                user.setActive(true);
                 logger.info("User found with details="+user);
                 HttpSession session = request.getSession();
                 session.setAttribute("User", user);
@@ -76,7 +76,7 @@ public class LoginServlet extends HttpServlet {
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher(request.getContextPath()+"/login.jsp");
+        RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/login.jsp");
 
         dispatcher.forward(request, response);
     }

@@ -43,9 +43,6 @@
                        <input type="submit" value="Send Request">
                     </form>
                 </c:if>
-                <c:if test="${requestScope.fail!=null}">
-                    <c:out value="Error!"/>
-                </c:if>
             </div>
             <div class="table">
                 <table border="1">
