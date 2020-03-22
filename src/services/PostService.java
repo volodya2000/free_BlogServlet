@@ -14,8 +14,8 @@ public class PostService {
         return postDAO.getPostById(id);
     }
 
-    void addPost(Post post) {
-        postDAO.addPost(post);
+    public void addPost(String postName,String information) {
+        postDAO.addPost( postName,information);
     }
 
     void deletePost(int id) {

@@ -1,0 +1,41 @@
+#user-info-table{
+    position: relative;
+    left: calc(100vw/3);
+    min-height: 70px;
+    padding: 100px 100px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    max-width: 700px;
+    text-align: center;
+}
+
+#user-info-table td, #user-info-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    background-color: white;
+}
+#user-info-table tr:nth-child(even){background-color: #f2f2f2;}
+
+#user-info-table tr:hover {background-color: #ddd;}
+
+#user-info-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:#6d737b;
+    color: white;
+}
+
+#createAuthor
+{
+    position: relative;
+    padding: 30px;
+}
+#deleteAuthorForm{
+    position: relative;
+    padding: 30px;
+}
+#deleteAccountForm{
+    position: relative;
+    padding: 30px;
+}

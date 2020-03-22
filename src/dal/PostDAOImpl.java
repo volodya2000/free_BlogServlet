@@ -1,5 +1,6 @@
 package dal;
 
+import com.mysql.jdbc.Statement;
 import entities.Author;
 import entities.Post;
 
@@ -67,12 +68,13 @@ public class PostDAOImpl implements PostDAO {
     }
 
     @Override
-    public boolean addPost(Post post) {
+    public boolean addPost(String postName,String information) {
 
+        Post post=new Post();
         Connection connection=null;
         PreparedStatement statement=null;
-
-        final String sql ="INSERT INTO post (post_id,post_name) " +
+        ResultSet resultSet=null;
+        final String sql ="INSERT INTO post (post_name,information) " +
                 "values(?,?);";
 
         try {
@@ -80,10 +82,19 @@ public class PostDAOImpl implements PostDAO {
             connection=ConnectionFactory.getConnection();
                 try {
                     logger.info("Creating statement");
-                    statement=connection.prepareStatement(sql);
-                    statement.setInt(1,post.getId());
-                    statement.setString(2,post.getNameOfPost());
+                    statement= connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+                    statement.setString(1,postName);
+                    statement.setString(2,information);
                     int result = statement.executeUpdate();
+                    try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
+                        if (generatedKeys.next()) {
+                            post.setId(generatedKeys.getInt(1));
+                            logger.warning("USER ID == "+post.getId());
+                        }
+                        else {
+                            throw new SQLException("Creating user failed, no ID obtained.");
+                        }
+                    }
                     if(result==1)
                     {
                         return true;
@@ -327,6 +338,7 @@ public class PostDAOImpl implements PostDAO {
             Post post = new Post();
             post.setId(rs.getInt("post_id"));
             post.setNameOfPost(rs.getString("post_name"));
+            post.setInformation(rs.getString("information"));
             return post;
         }catch (SQLException ex)
         {

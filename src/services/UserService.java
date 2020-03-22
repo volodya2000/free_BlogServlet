@@ -8,6 +8,7 @@ import entities.User;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class UserService {
 
@@ -52,7 +53,10 @@ public class UserService {
 
     public User findUserByNickname(String nickname) {
         User user =userDAOImpl.getUserByNickname(nickname);
-       user.setRolesList(userRolesDAO.getUserRolesById(user.getId()));
+        if(user!=null)
+        {
+            user.setRolesList(userRolesDAO.getUserRolesById(user.getId()));
+        }
         return user;
     }
 

@@ -25,7 +25,8 @@ public class ProfileServlet extends HttpServlet {
             User user;
             String nickname=request.getParameter("user");
             logger.info("nickname= "+nickname);
-            if((user=userService.findUserByNickname(nickname))!=null)
+            user=userService.findUserByNickname(nickname);
+            if(user!=null)
             {
                 request.setAttribute("findUser",user);
                 getServletContext().setAttribute("find_user",user);
