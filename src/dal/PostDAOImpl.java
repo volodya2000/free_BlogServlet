@@ -33,10 +33,11 @@ public class PostDAOImpl implements PostDAO {
                         logger.info("Creating statement!");
                         statement=connection.prepareStatement(sql);
                         statement.setInt(1,id);
-                        statement.execute();
+                        //statement.execute();
                         resultSet=statement.executeQuery();
-                        if((post=extractPostFromResultSet(resultSet))!=null)
+                        if(resultSet.next())
                         {
+                            post=extractPostFromResultSet(resultSet);
                             return post;
                         }
                     }catch (SQLException ex)
@@ -212,6 +213,101 @@ public class PostDAOImpl implements PostDAO {
         }
 
         return false;
+    }
+
+    @Override
+    public int numberOfPost() {
+        int number=0;
+        Connection connection=null;
+        PreparedStatement statement=null;
+        final String sql="SELECT COUNT(post_id) FROM post;";
+
+        try{
+            logger.info("Opening connection");
+            connection=ConnectionFactory.getConnection();
+            try{
+                logger.info("Creating statement");
+                statement=connection.prepareStatement(sql);
+                number=statement.executeUpdate();
+            }catch (SQLException ex)
+            {
+                ex.printStackTrace();
+            }finally {
+                try{
+                    logger.info("Closing statement");
+                    statement.close();
+                }catch (SQLException ex)
+                {
+                    logger.info("Closing statement error");
+                    ex.printStackTrace();
+                }
+            }
+        }finally {
+            try{
+                logger.info("Closing connection");
+                connection.close();
+            }catch (SQLException ex)
+            {
+                logger.info("Closing connetion error");
+                ex.printStackTrace();
+            }
+        }
+
+        return number;
+    }
+
+    @Override
+    public List<Post> findPosts(int currentPage, int recordsPerPage) {
+        List<Post> posts=new ArrayList<>();
+        Connection connection=null;
+        PreparedStatement statement=null;
+        ResultSet resultSet=null;
+        final String sql="SELECT * FROM post LIMIT ?,?;";
+        int start=0;
+        if(currentPage!=1)
+        {
+            start=currentPage*recordsPerPage-recordsPerPage +1;
+        }
+
+        try{
+            connection=ConnectionFactory.getConnection();
+            try{
+                statement=connection.prepareStatement(sql);
+                statement.setInt(1,start);
+                statement.setInt(2,recordsPerPage);
+                resultSet=statement.executeQuery();
+                while(resultSet.next())
+                {
+                    posts.add(extractPostFromResultSet(resultSet));
+                }
+                return posts;
+            }catch (SQLException ex)
+            {
+                ex.printStackTrace();
+            }finally {
+                try{
+                    logger.info("Closing statement");
+                    statement.close();
+                }catch (SQLException ex)
+                {
+                    logger.info("Closing statement error");
+                    ex.printStackTrace();
+                }
+            }
+        }finally {
+            try{
+                logger.info("Closing connection");
+                connection.close();
+            }catch (SQLException ex)
+            {
+                logger.info("Closing connection error");
+                ex.printStackTrace();
+            }
+        }
+
+
+
+        return null;
     }
 
     @Override

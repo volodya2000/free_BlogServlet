@@ -22,7 +22,7 @@
     %>
     <nav class="main-nav">
         <ul class="nav-bar">
-            <li><a href="">News</a></li>
+            <li><a href="/home">News</a></li>
             <li><a href="">Find news</a></li>
             <li><a href="">About</a></li>
             <li><a href="">Ukraine</a></li>

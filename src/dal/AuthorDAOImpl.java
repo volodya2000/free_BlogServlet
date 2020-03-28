@@ -364,7 +364,8 @@ public class AuthorDAOImpl implements AuthorDAO {
                         }
                     }
 
-            }finally {
+            }
+            finally {
                 try{
                     logger.info("Closing connection");
                     connection.close();

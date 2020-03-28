@@ -10,7 +10,7 @@ public class PostService {
 
     private PostDAOImpl postDAO = new PostDAOImpl();
 
-    Post getPostById(int id) {
+    public Post getPostById(int id) {
         return postDAO.getPostById(id);
     }
 
@@ -26,10 +26,18 @@ public class PostService {
         postDAO.updatePost(post);
     }
 
-    List<Post> getAll() {
+    public  List<Post> getAll() {
         return postDAO.getAll();
     }
 
-    List<Author> getAuthorsByPostId(int id)
+    public List<Author> getAuthorsByPostId(int id)
         {return postDAO.getAuthorsByPostId(id);}
+
+    public List<Post> findPosts(int currentPage, int pagesPerPage)
+    {
+        return postDAO.findPosts(currentPage,pagesPerPage);
+    }
+
+    public int numberOfPosts()
+    {return postDAO.numberOfPost();}
 }

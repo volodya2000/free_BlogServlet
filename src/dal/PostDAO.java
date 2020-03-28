@@ -13,4 +13,6 @@ public interface PostDAO {
     boolean updatePost(Post post);
     List<Post> getAll();
     List<Author>getAuthorsByPostId(int id);
+    List<Post>findPosts(int currentPage, int recordsPerPage);
+    int numberOfPost();
 }
