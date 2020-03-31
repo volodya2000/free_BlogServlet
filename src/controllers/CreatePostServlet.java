@@ -1,5 +1,6 @@
 package controllers;
 
+import entities.Post;
 import services.PostService;
 
 import javax.servlet.GenericServlet;
@@ -24,8 +25,11 @@ public class CreatePostServlet extends HttpServlet {
 
         final String EMPTY_POST="Dear moderator. Empty post is very bed :)";
         String content=request.getParameter("ckeditor");
+        String imageSource=request.getParameter("imageSource");
+        String description=request.getParameter("description");
+        String postName=request.getParameter("postName");
         logger.info("content= "+content);
-        if(content.equals(""))
+        if(content.equals("") || imageSource.equals("") || description.equals(""))
         {
             RequestDispatcher rd=getServletContext().getRequestDispatcher("/createPost.jsp");
             PrintWriter printWriter=response.getWriter();
@@ -33,7 +37,12 @@ public class CreatePostServlet extends HttpServlet {
             rd.include(request, response);
         }else
         {
-            postService.addPost("test",content);
+            Post post=new Post();
+            post.setNameOfPost(postName);
+            post.setImageSource(imageSource);
+            post.setDescription(description);
+            post.setInformation(content);
+            postService.addPost(post);
             RequestDispatcher rd = getServletContext().getRequestDispatcher("/createPost.jsp");
             rd.forward(request,response);
         }

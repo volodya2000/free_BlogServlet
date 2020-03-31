@@ -69,14 +69,13 @@ public class PostDAOImpl implements PostDAO {
     }
 
     @Override
-    public boolean addPost(String postName,String information) {
+    public boolean addPost(Post post) {
 
-        Post post=new Post();
         Connection connection=null;
         PreparedStatement statement=null;
         ResultSet resultSet=null;
-        final String sql ="INSERT INTO post (post_name,information) " +
-                "values(?,?);";
+        final String sql ="INSERT INTO post (post_name,information,description,image_source) " +
+                "values(?,?,?,?);";
 
         try {
             logger.info("Opening connection!");
@@ -84,8 +83,10 @@ public class PostDAOImpl implements PostDAO {
                 try {
                     logger.info("Creating statement");
                     statement= connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-                    statement.setString(1,postName);
-                    statement.setString(2,information);
+                    statement.setString(1,post.getNameOfPost());
+                    statement.setString(2,post.getInformation());
+                    statement.setString(3,post.getDescription());
+                    statement.setString(4,post.getImageSource());
                     int result = statement.executeUpdate();
                     try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
                         if (generatedKeys.next()) {
@@ -360,6 +361,56 @@ public class PostDAOImpl implements PostDAO {
     }
 
     @Override
+    public List<Post> getPostByName(String name) {
+        Connection connection=null;
+        PreparedStatement statement=null;
+        ResultSet resultSet=null;
+        List<Post>posts= new ArrayList<>();
+
+        final String sql="SELECT * FROM post WHERE post_name LIKE ?;";
+
+        try {
+            logger.info("Opening connection!");
+            connection=ConnectionFactory.getConnection();
+            name="%"+name+"%";
+            try{
+                statement=connection.prepareStatement(sql);
+                statement.setString(1,name);
+                statement.execute();
+                resultSet=statement.executeQuery();
+                while(resultSet.next())
+                {
+                    posts.add(extractPostFromResultSet(resultSet));
+                }
+                return posts;
+            }catch (SQLException ex)
+            {
+                ex.printStackTrace();
+            }finally {
+                try{
+                    logger.info("Closing statement!");
+                    statement.close();
+                }catch (SQLException ex)
+                {
+                    logger.info("Closing statement error!");
+                    ex.printStackTrace();
+                }
+            }
+        }finally {
+            try {
+                logger.info("Closing connection");
+                connection.close();
+            }catch (SQLException ex)
+            {
+                logger.info("Closing connection error!");
+                ex.printStackTrace();
+            }
+        }
+
+        return null;
+    }
+
+    @Override
     public List<Author> getAuthorsByPostId(int id) {
         Connection connection=null;
         PreparedStatement statement=null;
@@ -435,6 +486,10 @@ public class PostDAOImpl implements PostDAO {
             post.setId(rs.getInt("post_id"));
             post.setNameOfPost(rs.getString("post_name"));
             post.setInformation(rs.getString("information"));
+            //post.setDate(rs.getDate("date_of_creation"));
+            post.setDate(rs.getTimestamp("date_of_creation"));
+            post.setDescription(rs.getString("description"));
+            post.setImageSource(rs.getString("image_source"));
             return post;
         }catch (SQLException ex)
         {

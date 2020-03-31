@@ -4,6 +4,7 @@ import dal.UserDAOImpl;
 import dal.UserRolesDAOImpl;
 import entities.Roles;
 import entities.User;
+import filters.SHA1;
 import services.UserService;
 
 import javax.servlet.RequestDispatcher;
@@ -51,7 +52,9 @@ public class LoginServlet extends HttpServlet {
         }
         else
         {
-            if((user=userService.findByEmailAndPassword(email,password))!=null)
+            SHA1 sha1=new SHA1();
+            logger.info("tank85943221: "+sha1.hash("tank85943221"));
+            if((user=userService.findByEmailAndPassword(email,sha1.hash(password)))!=null)
             {
                 user.setRolesList(userService.getUserRoles(user));
                 user.setActive(true);

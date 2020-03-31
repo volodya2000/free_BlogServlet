@@ -7,9 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="freeBlogServlet" />
+        <module name="freeBlog" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="freeBlog" target="1.5" />
       <module name="freeBlogServlet" target="1.5" />
     </bytecodeTargetLevel>
   </component>

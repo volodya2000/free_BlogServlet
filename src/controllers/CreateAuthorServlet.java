@@ -19,6 +19,9 @@ import java.util.logging.Logger;
 @WebServlet(name = "CreateAuthorServlet",urlPatterns = {"/profile/author"})
 public class CreateAuthorServlet extends HttpServlet {
 
+
+    private final String AUTHOR_EXIST="You have already been an author";
+    private final String AUTHOR_CREDENTIALS_EMPTY="Name or username can not be empty";
     private static Logger logger =Logger.getLogger(CreateAuthorServlet.class.toString());
     private AuthorService authorService= new AuthorService();
     private UserService userService=new UserService();
@@ -28,17 +31,22 @@ public class CreateAuthorServlet extends HttpServlet {
         Cookie[] cookies = request.getCookies();
         Optional<Cookie>findUser=Arrays.stream(cookies).filter(cookie -> cookie.getName().equals("user_cookie")).findAny();
         User user= userService.findUserByNickname(findUser.get().getValue());
-        logger.info("user= "+user.getId());
-        logger.info("user roles= "+user.getRolesList());
+
         String name = request.getParameter("name");
         String surname =request.getParameter("surname");
-        if(!authorService.isAuthorExist(user.getId()))
+
+        if(!authorService.isAuthorExist(user.getId()) && name!=null && surname!=null)
         {
             authorService.addAuthor(user,name,surname);
             RequestDispatcher rd = request.getRequestDispatcher("/createAuthor.jsp");
             rd.forward(request,response);
         }else {
-            request.setAttribute("author_exist", "You have already been an author");
+            if(name==null || surname==null)
+            {
+                request.setAttribute("empty_author",AUTHOR_CREDENTIALS_EMPTY);
+                getServletContext().getRequestDispatcher("/createAuthor.jsp").forward(request,response);
+            }
+            request.setAttribute("author_exist",AUTHOR_EXIST);
             RequestDispatcher rd = request.getRequestDispatcher("/createAuthor.jsp");
             rd.forward(request, response);
         }

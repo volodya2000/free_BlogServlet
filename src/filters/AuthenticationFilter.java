@@ -34,7 +34,7 @@ public class AuthenticationFilter implements Filter {
             logger.info("Unauthorized request");
 //            RequestDispatcher dispatcher =request.getRequestDispatcher("login.jsp");
 //            dispatcher.forward(request, response);
-            response.sendRedirect("/login.jsp");
+            response.sendRedirect("/login");
         }
         else {
             chain.doFilter(req, resp);

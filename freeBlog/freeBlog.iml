@@ -11,8 +11,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="jquery-1.8.3" level="application" />
-    <orderEntry type="library" name="Maven: com.jeramtough:jtutil:1.1.0-RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: net.sf.flexjson:flexjson:3.3" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.11.0.rc1" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.11.0.rc1" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.11.0.rc1" level="project" />
   </component>
 </module>

@@ -2,14 +2,19 @@ package controllers;
 
 import entities.Roles;
 import entities.User;
+import filters.SHA1;
 import services.UserService;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
+import javax.xml.bind.DatatypeConverter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @WebServlet(name = "RegistrationServlet",urlPatterns = "/registration")
@@ -24,7 +29,7 @@ public class RegistrationServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String nickname =request.getParameter("nickname");
+        String nickname =request.getParameter("username");
         String email=request.getParameter("email");
         String password=request.getParameter("password");
 
@@ -49,9 +54,11 @@ public class RegistrationServlet extends HttpServlet {
             rd.include(request, response);
 
         }else
-            if(!userService.isExist(email,nickname))
+            if(userService.isExist(email,nickname)==false)
             {
-                user=new User(email,true,nickname,password);
+                SHA1 sha1 = new SHA1();
+                user=new User(email,true,nickname,sha1.hash(password));
+                user.setRolesList(userService.getUserRoles(user));
                 userService.addUser(user);
                 logger.warning("USERID= "+user.getId());
                 userService.addRole(user.getId(), Roles.USER);
@@ -62,7 +69,7 @@ public class RegistrationServlet extends HttpServlet {
                 Cookie loginCookie = new Cookie("user_cookie",user.getNickname());
                 loginCookie.setMaxAge(10*60);
                 response.addCookie(loginCookie);
-                response.sendRedirect(request.getRequestURI()+"/home.jsp");
+                response.sendRedirect("/home");
             }else
             {
                 RequestDispatcher requestDispatcher=getServletContext().getRequestDispatcher("/registration.jsp");
@@ -74,6 +81,7 @@ public class RegistrationServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        RequestDispatcher rd= getServletContext().getRequestDispatcher("/registration.jsp");
+        rd.forward(request,response);
     }
 }

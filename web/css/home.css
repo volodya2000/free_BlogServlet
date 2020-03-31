@@ -104,7 +104,10 @@
     grid-template-rows:  1fr 1fr;
     justify-content: center;
 }
-
+.search{
+    position: relative;
+    max-height: 300px;
+}
 .posts{
     align-self: center;
    justify-self: center;

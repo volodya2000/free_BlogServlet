@@ -1,3 +1,10 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: vovan
+  Date: 28.03.2020
+  Time: 20:19
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core_1_1" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
@@ -47,56 +54,27 @@
                     <input type="text" style="width: 100%" id="searchPost"  name="searchPost" placeholder="Find the post" onkeyup="">
                     <div id="result"> </div>
                 </div>
-                <div id="createAuthor">
-                    <form action="/profile/author" method="post">
-                        <input class="btn btn-dark" type="submit" value="Create an author account">
-                    </form>                </div>
-                <div class="table">
-                    <table id="user-info-table">
-                        <thead>
-                        <tr>
-                            <th scope="col">Nickname</th>
-                            <th scope="col">Email</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <th>${User.nickname}</th>
-                            <th>${User.email}</th>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div id="deleteAuthorForm">
-                    <form action="/profile/delete" method="post">
-                        <input class="btn btn-dark" type="submit" value="Delete an author account">
-                    </form>
-
-                    <c:if test="${requestScope.success_deletion_author!=null}">
-                        <p><c:out value="${requestScope.success_deletion_author}"/></p>
-                    </c:if>
-                    <c:if test="${requestScope.failed_deletion_author!=null}">
-                        <p><c:out value="${requestScope.failed_deletion_author}"/></p>
-                    </c:if>
-                </div>
-                <div id="deleteAccountForm">
-                    <form action="/profile/delete" method="post">
-                        <input class="btn btn-dark" type="submit" value="Delete your account">
-                    </form>
-
-                </div>
             </div>
 
-        </div>
-    </div>
+            </div>
+            <aside class="ads">
 
-</div>
-<footer class="main-footer"><p>Copyright&copy; 2020</p></footer>
+                <div class="social-icons">
+                    <h6>Contact us:</h6>
+                    <a href=""> <i class="fab fa-facebook"></i></a>
+                    <a href="">  <i class="fab fa-instagram"></i></a>
+                    <a href=""> <i class="fab fa-twitter"></i></a>
+
+
+
+                </div>
+            </aside>
+        </div>
+
+    </div>
+    <footer class="main-footer"><p>Copyright&copy; 2020</p></footer>
 </div>
 <script src="js/search.js"></script>
 <script src="js/currentDate.js"></script>
 </body>
 </html>
-
-
-
