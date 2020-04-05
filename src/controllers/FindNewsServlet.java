@@ -1,8 +1,6 @@
 package controllers;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import entities.Post;
-import flexjson.JSONSerializer;
 import services.PostService;
 
 import javax.servlet.RequestDispatcher;
@@ -24,28 +22,29 @@ public class FindNewsServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String postName =request.getParameter("post");
-        logger.info("name of post: "+postName);
+        synchronized (this) {
+            String postName = request.getParameter("post");
+            logger.info("name of post: " + postName);
 
-        List<Post> findPosts = postService.getPostByName(postName);
-        if(findPosts!=null) {
-            response.setCharacterEncoding("UTF-8");
-            PrintWriter printWriter = response.getWriter();
-            printWriter.write("<ul style=\"width: 100%; height: 400px; overflow: auto\">");
-        for (Post post:
-             findPosts) {
-            printWriter.write("<li style=\"justify-content: center; height:60px\">" +
-                    "<a href=\"/post?id="+post.getId()+"\">" +
-                    " <img src='"+post.getImageSource()+"'style=\"height: 50px ;width: 50px\" >"
-            +post.getNameOfPost()+"</li>");
-        }
-            printWriter.write("</ul>");
+            List<Post> findPosts = postService.getPostByName(postName);
+            if (findPosts != null) {
+                response.setCharacterEncoding("UTF-8");
+                PrintWriter printWriter = response.getWriter();
+                printWriter.write("<ul style=\"width: 100%; height: 400px; overflow: auto\">");
+                for (Post post :
+                        findPosts) {
+                    printWriter.write("<li style=\"justify-content: center; height:60px\">" +
+                            "<a href=\"/post?id=" + post.getId() + "\">" +
+                            " <img src='" + post.getImageSource() + "'style=\"height: 50px ;width: 50px\" >"
+                            + post.getNameOfPost() + "</li>");
+                }
+                printWriter.write("</ul>");
 
-            printWriter.flush();
-            printWriter.close();
+                printWriter.flush();
+                printWriter.close();
+            }
         }
     }
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestDispatcher requestDispatcher=getServletContext().getRequestDispatcher("/findNews.jsp");
         requestDispatcher.forward(request,response);

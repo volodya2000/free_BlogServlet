@@ -24,7 +24,8 @@ public class AdminPanelServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-
+        synchronized (this)
+        {
         if (request.getRequestURI().equals("/profile/logout")) {
             RequestDispatcher rd = getServletContext().getRequestDispatcher("/logout");
             rd.include(request, response);
@@ -32,7 +33,7 @@ public class AdminPanelServlet extends HttpServlet {
 
         User user = (User) getServletContext().getAttribute("find_user");
         String makeAdmin, makeModerator, deleteUser;
-        logger.info("user " + user);
+
         makeAdmin = request.getParameter("makeAdmin");
         makeModerator = request.getParameter("makeModerator");
         deleteUser = request.getParameter("deleteUser");
@@ -89,6 +90,7 @@ public class AdminPanelServlet extends HttpServlet {
             RequestDispatcher rd = getServletContext().getRequestDispatcher("/confirm_moderate.jsp");
             rd.forward(request, response);
         }
+    }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -20,7 +20,8 @@ public class DeleteAuthorServlet extends HttpServlet {
     private AuthorService authorService=new AuthorService();
     private UserService userService=new UserService();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Cookie[] cookies = request.getCookies();
+        synchronized (this)
+        {Cookie[] cookies = request.getCookies();
         Optional<Cookie> findUser= Arrays.stream(cookies).filter(cookie -> cookie.getName().equals("user_cookie")).findAny();
         User user= userService.findUserByNickname(findUser.get().getValue());
         if(authorService.getAuthorByUserId(user.getId())!=null)
@@ -35,6 +36,7 @@ public class DeleteAuthorServlet extends HttpServlet {
             RequestDispatcher rd=getServletContext().getRequestDispatcher("/moderatorPage.jsp");
             rd.forward(request,response);
         }
+    }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

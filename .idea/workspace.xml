@@ -6,125 +6,35 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="230244af-18d2-4e5e-a150-db95ee370abd" name="Default Changelist" comment="Added live searhing of posts">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_11_0_rc1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_11_0_rc1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_11_0_rc1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_flexjson_flexjson_3_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/freeBlog/freeBlog.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/freeBlog/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/FindNewsServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/PostServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/filters/SHA1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/home-style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/findNews.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/currentDate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/lastNews.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/postNews.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c2cc2ab0-09fe-4764-a257-03504a2a7347.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c2cc2ab0-09fe-4764-a257-03504a2a7347.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="230244af-18d2-4e5e-a150-db95ee370abd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/controllers/AllNewsServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/LastNewsServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/filters/CharsetFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/page.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/savePost.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/freeBlogServlet/freeBlogServlet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/freeBlogServlet/freeBlogServlet.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/freeBlogServlet/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/freeBlogServlet/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/free_BlogServlet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/free_BlogServlet.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/AdminPanelServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AdminPanelServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/CreateAuthorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/CreateAuthorServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/CreatePostServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/CreatePostServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/HomeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/DeleteAuthorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/DeleteAuthorServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/FindNewsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/FindNewsServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/HomeServlet.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/LogoutServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/PostServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/PostServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/ProfileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ProfileServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/RegistrationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dal/PostDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dal/PostDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dal/PostDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dal/PostDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/filters/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/filters/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/UserDTO.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/adminPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/adminPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/ckeditor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/ckeditor.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/sample/css/sample.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/sample/img/bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/sample/img/github.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/sample/img/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/sample/img/umbrellas.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/af.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/ar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/ast.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/az.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/bg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/ca.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/cs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/da.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/de-ch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/de.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/el.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/en-au.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/en-gb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/eo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/es.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/et.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/eu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/fa.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/fi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/fr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/gl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/gu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/he.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/hr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/hu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/id.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/it.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/ja.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/km.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/kn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/ko.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/ku.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/lt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/lv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/ms.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/nb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/ne.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/nl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/no.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/oc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/pl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/pt-br.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/pt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/ro.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/ru.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/si.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/sk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/sl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/sq.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/sr-latn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/sr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/sv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/th.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/tr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/tt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/ug.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/uk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/vi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/zh-cn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ckeditor5-build-classic/translations/zh.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/confirm_moderate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/confirm_moderate.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/createAuthor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/createAuthor.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/createPost.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/createPost.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/login-form.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/login-form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/tinymceConfig.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/findNews.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/findNews.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/news.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lastNews.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/lastNews.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/moderatorPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/moderatorPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/news.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/post.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/registration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/postNews.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/postNews.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/userPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/userPage.jsp" afterDir="false" />
     </list>
     <list id="002e35d6-06f7-4a7f-8da8-500b64edd6c7" name="Revert &quot;HttpAuthorization&quot;" comment="Revert &quot;HttpAuthorization&quot;&#10;&#10;This reverts commit 68d66f43">
@@ -179,78 +89,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/lastNews.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="53" column="92" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="92" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/findNews.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="55" column="21" lean-forward="true" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://c2cc2ab0-09fe-4764-a257-03504a2a7347/schema/servlet_db/table/user">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="0580facb-4f64-4324-98c0-cc3114f2ee21">
-              <filtering>
-                <filter text="" />
-              </filtering>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://c2cc2ab0-09fe-4764-a257-03504a2a7347/schema/servlet_db/table/user_roles">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="0580facb-4f64-4324-98c0-cc3114f2ee21">
-              <filtering>
-                <filter text="" />
-              </filtering>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/adminPage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="91" selection-start-line="91" selection-end-line="91" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/moderatorPage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="89" column="14" selection-start-line="89" selection-start-column="14" selection-end-line="89" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/userPage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/controllers/PostServlet.java">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="26" column="84" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
+            <state relative-caret-position="204">
+              <caret line="12" column="48" lean-forward="true" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -263,16 +106,17 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="HTML File" />
-        <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>jstl</find>
+      <find>server.xml</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -299,57 +143,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="C:/OSPanel/domains/lab4/moderDoctor.php" />
-        <option value="C:/OSPanel/domains/lab4/editDoctor.php" />
-        <option value="C:/OSPanel/domains/lab4/findDoctorId.php" />
-        <option value="C:/OSPanel/domains/lab4/findPatientId.php" />
-        <option value="C:/OSPanel/domains/lab4/index.php" />
-        <option value="C:/OSPanel/domains/lab4/findContractId.php" />
-        <option value="C:/OSPanel/domains/lab4/moderContractPage.php" />
-        <option value="C:/OSPanel/domains/lab4/moderPatientPage.php" />
-        <option value="C:/OSPanel/domains/lab4/moderDoctorPage.php" />
-        <option value="$PROJECT_DIR$/web/css/pagination.css" />
-        <option value="$PROJECT_DIR$/web/common/header.jsp" />
-        <option value="$PROJECT_DIR$/web/home.jsp" />
-        <option value="$PROJECT_DIR$/web/ckeditor_4.14.0_full/ckeditor/config.js" />
         <option value="$PROJECT_DIR$/src/filters/AuthenticationFilter.java" />
-        <option value="$PROJECT_DIR$/src/controllers/CreatePostServlet.java" />
         <option value="$PROJECT_DIR$/src/entities/Post.java" />
-        <option value="$PROJECT_DIR$/src/controllers/HomeServlet.java" />
         <option value="$PROJECT_DIR$/web/css/home-style.css" />
         <option value="$PROJECT_DIR$/web/css/main.css" />
         <option value="$PROJECT_DIR$/web/login.jsp" />
         <option value="$PROJECT_DIR$/web/lastNewsReserv.jsp" />
         <option value="$PROJECT_DIR$/web/post.jsp" />
-        <option value="$PROJECT_DIR$/src/controllers/CreateAuthorServlet.java" />
         <option value="$PROJECT_DIR$/src/filters/SHA1.java" />
-        <option value="$PROJECT_DIR$/src/controllers/PostServlet.java" />
         <option value="$PROJECT_DIR$/web/js/currentDate.js" />
         <option value="$PROJECT_DIR$/src/dal/UserDAOImpl.java" />
         <option value="$PROJECT_DIR$/web/findPost.jsp" />
         <option value="$PROJECT_DIR$/src/dal/PostDAO.java" />
         <option value="$PROJECT_DIR$/src/services/PostService.java" />
-        <option value="$PROJECT_DIR$/src/controllers/LoginServlet.java" />
-        <option value="$PROJECT_DIR$/src/controllers/RegistrationServlet.java" />
         <option value="$PROJECT_DIR$/src/dal/PostDAOImpl.java" />
         <option value="$PROJECT_DIR$/freeBlog/pom.xml" />
         <option value="$PROJECT_DIR$/freeBlogServlet/pom.xml" />
         <option value="$PROJECT_DIR$/src/controllers/JsonReader.java" />
-        <option value="$PROJECT_DIR$/web/lastNews.jsp" />
-        <option value="$PROJECT_DIR$/web/postNews.jsp" />
-        <option value="$PROJECT_DIR$/web/js/search.js" />
         <option value="$PROJECT_DIR$/web/css/home.css" />
-        <option value="$PROJECT_DIR$/web/findNews.jsp" />
-        <option value="$PROJECT_DIR$/src/controllers/FindNewsServlet.java" />
         <option value="$PROJECT_DIR$/web/registration.jsp" />
         <option value="$PROJECT_DIR$/web/css/login-form.css" />
-        <option value="$PROJECT_DIR$/web/createPost.jsp" />
-        <option value="$PROJECT_DIR$/web/createAuthor.jsp" />
-        <option value="$PROJECT_DIR$/web/confirm_moderate.jsp" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/src/controllers/CreateAuthorServlet.java" />
+        <option value="$PROJECT_DIR$/src/controllers/DeleteAuthorServlet.java" />
+        <option value="$PROJECT_DIR$/src/controllers/PostServlet.java" />
+        <option value="$PROJECT_DIR$/src/controllers/ProfileServlet.java" />
+        <option value="$PROJECT_DIR$/src/controllers/RegistrationServlet.java" />
+        <option value="$PROJECT_DIR$/src/controllers/LoginServlet.java" />
+        <option value="$PROJECT_DIR$/src/controllers/CreatePostServlet.java" />
+        <option value="$PROJECT_DIR$/web/home.jsp" />
+        <option value="$PROJECT_DIR$/src/controllers/HomeServlet.java" />
+        <option value="$PROJECT_DIR$/src/controllers/NewsServlet.java" />
+        <option value="$PROJECT_DIR$/src/controllers/AdminPanelServlet.java" />
+        <option value="$PROJECT_DIR$/web/css/page.css" />
         <option value="$PROJECT_DIR$/web/adminPage.jsp" />
+        <option value="$PROJECT_DIR$/web/confirm_moderate.jsp" />
+        <option value="$PROJECT_DIR$/web/createAuthor.jsp" />
+        <option value="$PROJECT_DIR$/web/createPost.jsp" />
+        <option value="$PROJECT_DIR$/web/lastNews.jsp" />
         <option value="$PROJECT_DIR$/web/moderatorPage.jsp" />
+        <option value="$PROJECT_DIR$/web/news.jsp" />
+        <option value="$PROJECT_DIR$/web/postNews.jsp" />
         <option value="$PROJECT_DIR$/web/userPage.jsp" />
+        <option value="$PROJECT_DIR$/web/js/savePost.js" />
+        <option value="$PROJECT_DIR$/web/js/search.js" />
+        <option value="$PROJECT_DIR$/web/findNews.jsp" />
+        <option value="$PROJECT_DIR$/src/filters/CharsetFilter.java" />
+        <option value="$PROJECT_DIR$/src/controllers/FindNewsServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/controllers/AllNewsServlet.java" />
+        <option value="$PROJECT_DIR$/src/controllers/LastNewsServlet.java" />
+        <option value="$PROJECT_DIR$/src/controllers/LogoutServlet.java" />
       </list>
     </option>
   </component>
@@ -368,9 +212,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
-    <option name="y" value="438" />
+    <option name="y" value="96" />
     <option name="width" value="1380" />
-    <option name="height" value="297" />
+    <option name="height" value="639" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -389,23 +233,7 @@
             <path>
               <item name="free_BlogServlet" type="b2602c69:ProjectViewProjectNode" />
               <item name="free_BlogServlet" type="462c0819:PsiDirectoryNode" />
-              <item name="freeBlog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="free_BlogServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="free_BlogServlet" type="462c0819:PsiDirectoryNode" />
-              <item name="freeBlogServlet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="free_BlogServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="free_BlogServlet" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="free_BlogServlet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="free_BlogServlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="free_BlogServlet" type="b2602c69:ProjectViewProjectNode" />
@@ -440,7 +268,7 @@
               <item name="free_BlogServlet" type="b2602c69:ProjectViewProjectNode" />
               <item name="free_BlogServlet" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -457,7 +285,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/css" />
+    <property name="last_opened_file_path" value="C:/OSPanel/domains/lab4/moderPatientPage.php" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -800,7 +628,12 @@
       <workItem from="1585386153258" duration="25653000" />
       <workItem from="1585470640355" duration="14061000" />
       <workItem from="1585558613431" duration="10599000" />
-      <workItem from="1585646096849" duration="16955000" />
+      <workItem from="1585646096849" duration="18384000" />
+      <workItem from="1585759229678" duration="2993000" />
+      <workItem from="1585816071343" duration="8083000" />
+      <workItem from="1585922542843" duration="583000" />
+      <workItem from="1586001116593" duration="594000" />
+      <workItem from="1586091639803" duration="306000" />
     </task>
     <task id="LOCAL-00001" summary="HttpAuthorization">
       <created>1583362216274</created>
@@ -921,11 +754,18 @@
       <option name="project" value="LOCAL" />
       <updated>1585400498107</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added live searching of posts">
+      <created>1585689563018</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1585689563019</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="492766000" />
+    <option name="totallyTimeSpent" value="506754000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -938,18 +778,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.81585675" visible="true" weight="0.2322239" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.80851066" visible="true" weight="0.2473525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Image Layers" order="6" />
-      <window_info id="Web" order="7" sideWeight="0.18414322" side_tool="true" weight="0.22844176" />
+      <window_info id="Web" order="7" sideWeight="0.19148937" side_tool="true" visible="true" weight="0.2473525" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49621785" visible="true" weight="0.3453355" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49621785" visible="true" weight="0.4304419" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4977307" weight="0.049099836" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -969,12 +810,12 @@
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.18154311" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.033282906" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.81585675" visible="true" weight="0.2322239" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.81585675" visible="true" weight="0.23600605" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -984,7 +825,7 @@
       <window_info id="Web" order="7" sideWeight="0.18414322" side_tool="true" weight="0.22844176" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49621785" visible="true" weight="0.48772505" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49621785" weight="0.30114567" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4977307" weight="0.049099836" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1004,7 +845,7 @@
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.18154311" />
+      <window_info anchor="right" id="Database" order="6" weight="0.07186082" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout-to-restore>
@@ -1070,21 +911,10 @@
     <MESSAGE value="Add text editor.Correct save to db." />
     <MESSAGE value="Pagination plus uploading text." />
     <MESSAGE value="Added live searhing of posts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added live searhing of posts" />
+    <MESSAGE value="Added live searching of posts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added live searching of posts" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/controllers/DeleteAuthorServlet.java</url>
-          <line>21</line>
-          <properties class="controllers.DeleteAuthorServlet" method="doPost">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
         <watch expression="this.context" custom="javax.servlet.ServletConfig,controllers.ProfileServlet" />
@@ -1095,327 +925,372 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/lastNewsReserv.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/controllers/HomeServlet.java">
+    <entry file="file://C:/OSPanel/domains/lab4/getContracts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="71" column="74" lean-forward="true" selection-start-line="71" selection-start-column="74" selection-end-line="71" selection-end-column="74" />
+        <state relative-caret-position="-51">
+          <folding>
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/OSPanel/domains/lab4/getDoctors.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/OSPanel/domains/lab4/getPatients.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <folding>
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/OSPanel/domains/lab4/findPatientId.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/OSPanel/domains/lab4/findDoctorId.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/OSPanel/domains/lab4/findContractId.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/OSPanel/domains/lab4/moderContractPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/OSPanel/domains/lab4/moderDoctorPage.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://C:/OSPanel/domains/lab4/moderPatientPage.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://c2cc2ab0-09fe-4764-a257-03504a2a7347/schema/servlet_db/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="eae5a6fb-bb4b-49d3-846b-2ccf32de8e64">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/registration.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://c2cc2ab0-09fe-4764-a257-03504a2a7347/schema/servlet_db/table/post">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="eae5a6fb-bb4b-49d3-846b-2ccf32de8e64">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/page.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1717">
+          <caret line="101" column="1" selection-start-line="101" selection-start-column="1" selection-end-line="101" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/adminPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-714">
+          <caret line="12" column="41" lean-forward="true" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/confirm_moderate.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/lastNews.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/AdminPanelServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="99" column="1" selection-start-line="99" selection-start-column="1" selection-end-line="99" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/createAuthor.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/createPost.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-694">
+          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/moderatorPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1218">
+          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/news.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-368">
+          <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/userPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-487">
+          <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/hideNav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/postNews.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/filters/CharsetFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/findNews.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/savePost.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/AllNewsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/CreateAuthorServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/CreatePostServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="33" column="78" selection-start-line="33" selection-start-column="78" selection-end-line="33" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/DeleteAuthorServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/FindNewsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="49" column="121" selection-start-line="49" selection-start-column="121" selection-end-line="49" selection-end-column="121" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/post.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/controllers/CreatePostServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/controllers/LastNewsServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+        <state relative-caret-position="272">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/AdminPanelServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/controllers/LoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/LogoutServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/PostServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/CreateAuthorServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/controllers/ProfileServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="527">
+          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/RegistrationServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/AuthorDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/AuthorDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4267">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dal/PostDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/UserDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-341">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/filters/SHA1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/ProfileServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="47" column="15" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/news.jsp" />
-    <entry file="file://$PROJECT_DIR$/web/result.jsp" />
-    <entry file="file://$PROJECT_DIR$/web/js/tinymceConfig.js" />
-    <entry file="file://$PROJECT_DIR$/web/js/getDiv.js" />
-    <entry file="file://$PROJECT_DIR$/web/js/getData.js" />
-    <entry file="file://$PROJECT_DIR$/web/js/get_editor_content.js" />
-    <entry file="file://$PROJECT_DIR$/web/js/currentDate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/hideNav.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/UserDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/services/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/PublicationDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/services/PublicationService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/PostDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/services/PostService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/filters/AuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/DeleteAuthorServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/UserDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-680">
-          <caret line="407" column="35" selection-start-line="407" selection-start-column="35" selection-end-line="407" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/LoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="65" column="15" lean-forward="true" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/RegistrationServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="60" column="66" selection-start-line="60" selection-start-column="66" selection-end-line="60" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freeBlog/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freeBlogServlet/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dal/PostDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="374" column="21" selection-start-line="374" selection-start-column="21" selection-end-line="374" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/JsonReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://c2cc2ab0-09fe-4764-a257-03504a2a7347/schema/servlet_db/table/post_tages">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="0580facb-4f64-4324-98c0-cc3114f2ee21">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://c2cc2ab0-09fe-4764-a257-03504a2a7347/schema/servlet_db/table/post">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="0580facb-4f64-4324-98c0-cc3114f2ee21">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="110" column="7" lean-forward="true" selection-start-line="110" selection-start-column="7" selection-end-line="110" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/FindNewsServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="54" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/registration.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/main.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/login-form.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="116" selection-start-line="116" selection-end-line="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/search.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/confirm_moderate.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="91" column="32" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/createAuthor.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" column="112" selection-start-line="61" selection-start-column="112" selection-end-line="61" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/createPost.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="6" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/findNews.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="55" column="21" lean-forward="true" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/postNews.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/lastNews.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="53" column="92" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://c2cc2ab0-09fe-4764-a257-03504a2a7347/schema/servlet_db/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="0580facb-4f64-4324-98c0-cc3114f2ee21">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://c2cc2ab0-09fe-4764-a257-03504a2a7347/schema/servlet_db/table/user_roles">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="0580facb-4f64-4324-98c0-cc3114f2ee21">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/adminPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="91" selection-start-line="91" selection-end-line="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/moderatorPage.jsp">
+    <entry file="file://$PROJECT_DIR$/src/services/AuthorService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="89" column="14" selection-start-line="89" selection-start-column="14" selection-end-line="89" selection-end-column="14" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/userPage.jsp">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/PostServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="26" column="84" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
+        <state relative-caret-position="204">
+          <caret line="12" column="48" lean-forward="true" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
         </state>
       </provider>
     </entry>

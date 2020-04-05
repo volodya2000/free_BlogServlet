@@ -18,6 +18,8 @@ public class PostServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        synchronized (this)
+        {
         String id=request.getParameter("id");
         if(id!=null)
         {
@@ -28,4 +30,5 @@ public class PostServlet extends HttpServlet {
             rd.forward(request,response);
         }
     }
+}
 }

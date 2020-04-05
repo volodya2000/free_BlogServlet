@@ -27,30 +27,28 @@ public class CreateAuthorServlet extends HttpServlet {
     private UserService userService=new UserService();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        synchronized (this) {
+            Cookie[] cookies = request.getCookies();
+            Optional<Cookie> findUser = Arrays.stream(cookies).filter(cookie -> cookie.getName().equals("user_cookie")).findAny();
+            User user = userService.findUserByNickname(findUser.get().getValue());
 
-        Cookie[] cookies = request.getCookies();
-        Optional<Cookie>findUser=Arrays.stream(cookies).filter(cookie -> cookie.getName().equals("user_cookie")).findAny();
-        User user= userService.findUserByNickname(findUser.get().getValue());
+            String name = request.getParameter("name");
+            String surname = request.getParameter("surname");
 
-        String name = request.getParameter("name");
-        String surname =request.getParameter("surname");
-
-        if(!authorService.isAuthorExist(user.getId()) && name!=null && surname!=null)
-        {
-            authorService.addAuthor(user,name,surname);
-            RequestDispatcher rd = request.getRequestDispatcher("/createAuthor.jsp");
-            rd.forward(request,response);
-        }else {
-            if(name==null || surname==null)
-            {
-                request.setAttribute("empty_author",AUTHOR_CREDENTIALS_EMPTY);
-                getServletContext().getRequestDispatcher("/createAuthor.jsp").forward(request,response);
+            if (!authorService.isAuthorExist(user.getId()) && name != null && surname != null) {
+                authorService.addAuthor(user, name, surname);
+                RequestDispatcher rd = request.getRequestDispatcher("/createAuthor.jsp");
+                rd.forward(request, response);
+            } else {
+                if (name == null || surname == null) {
+                    request.setAttribute("empty_author", AUTHOR_CREDENTIALS_EMPTY);
+                    getServletContext().getRequestDispatcher("/createAuthor.jsp").forward(request, response);
+                }
+                request.setAttribute("author_exist", AUTHOR_EXIST);
+                RequestDispatcher rd = request.getRequestDispatcher("/createAuthor.jsp");
+                rd.forward(request, response);
             }
-            request.setAttribute("author_exist",AUTHOR_EXIST);
-            RequestDispatcher rd = request.getRequestDispatcher("/createAuthor.jsp");
-            rd.forward(request, response);
         }
-
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

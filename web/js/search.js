@@ -14,21 +14,6 @@ $(document).ready(function () {
                 console.log('Error occured!!');
             }
         });
-
-        // if(post.length>=1)
-        //     $.ajax({
-        //         contentType:"application/json;charset=UTF-8",
-        //         url : '/find',
-        //         method : 'POST',
-        //         data : JSON.stringify(post),
-        //         dataType:"json",
-        //         success : function(resultText){
-        //             $('#result').html(resultText);
-        //         },
-        //         error : function(jqXHR, exception){
-        //             console.log('Error occured!!');
-        //         }
-        //     });
     });
 
 });

@@ -4,7 +4,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/page.css">
     <link rel="stylesheet" href="css/home-style.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/10404fa3b3.js" crossorigin="anonymous"></script>
@@ -22,8 +22,8 @@
         <nav class="main-nav">
             <ul class="nav-bar">
                 <li><a href="home">Top Posts</a></li>
+                <li><a href="news">All posts</a></li>
                 <li><a href="find">Find post</a></li>
-                <li><a href="">About</a></li>
                 <li>Account <i  class="fas fa-bars"></i>
                     <ul class="inner-list" >
                         <li><a href="profile" id="profile">Profile</a></li>
