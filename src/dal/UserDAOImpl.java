@@ -353,8 +353,7 @@ public class UserDAOImpl implements UserDAO{
 //        final String sql1="DELETE user,author FROM user INNER " +
 //                "JOIN author ON author.user_id=user.user_id WHERE user.user_id=?;";
 
-        final String sql2="DELETE user,user_roles FROM user INNER " +
-                "JOIN user_roles ON user.user_id=user_roles.user_id WHERE user.user_id=?;";
+        final String sql="DELETE FROM user WHERE user.user_id=?;";
 
         Connection connection=null;
         PreparedStatement statement=null;
@@ -364,13 +363,10 @@ public class UserDAOImpl implements UserDAO{
             connection=ConnectionFactory.getConnection();
                 try{
                     logger.info("Creating statement!");
-//                    statement=connection.prepareStatement(sql1);
-//                    statement.setInt(1,id);
-//                    int result1=statement.executeUpdate();
-                    statement=connection.prepareStatement(sql2);
-                    int result2=statement.executeUpdate();
+                    statement=connection.prepareStatement(sql);
                     statement.setInt(1,id);
-                    if(/*result1==1 &&*/ result2==1)
+                    int result=statement.executeUpdate();
+                    if(result==1)
                     {
                         return true;
                     }

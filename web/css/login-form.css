@@ -1,11 +1,7 @@
 @use postcss-cssnext;
 /* helpers/align.css */
 
-.main-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 
 /* helpers/grid.css */
 
@@ -15,11 +11,15 @@
 }
 
 .grid {
+    margin: 30px 0;
     border: 2px solid #e5e5e5;
     border-radius: var(--loginHeaderBackgroundColor);
     max-width: 700px;
-    width: 50%;
+    width: 40%;
+    min-width: 300px;
 }
+
+
 
 /* helpers/icon.css */
 
@@ -94,6 +94,11 @@ fieldset {
     border: none;
     margin: 0;
 }
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 input {
     appearance: none;
@@ -109,6 +114,7 @@ input[type='submit'] {
 }
 
 .form input[type='email'],
+.form input[type='text'],
 .form input[type='password'] {
     width: 100%;
 }
@@ -156,13 +162,15 @@ input[type='submit'] {
     width: 0.5em;
 }
 
-.login input[type='email'],
+.login input[type='email'],.login input[type='text'],
 .login input[type='password'] {
+    width: 100%;
     border: 0.0625em solid #e5e5e5;
     padding: 1em 1.25em;
 }
 
 .login input[type='email'] {
+    width: 100%;
     border-top-left-radius: var(--loginInputBorderRadius);
     border-top-right-radius: var(--loginInputBorderRadius);
 }

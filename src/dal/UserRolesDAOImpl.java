@@ -105,6 +105,45 @@ public class UserRolesDAOImpl implements UserRolesDAO {
     }
 
     @Override
+    public void deleteAllRoles(int userId) {
+        Connection connection=null;
+        PreparedStatement statement=null;
+
+        final String sql="DELETE FROM user_roles WHERE user_roles.user_id=?;";
+
+        try{
+            logger.info("Opening connection");
+            connection=ConnectionFactory.getConnection();
+            try{
+                logger.info("Creating statement");
+                statement=connection.prepareStatement(sql);
+                statement.setInt(1,userId);
+                statement.execute();
+            }catch (SQLException ex)
+            {
+                ex.printStackTrace();
+            }finally {
+                try{
+                    logger.info("Closing statement");
+                    statement.close();
+                }catch (SQLException ex)
+                {
+                    logger.info("Closing statement error");
+                }
+            }
+        }finally {
+            try{
+                logger.info("Closing connection");
+                connection.close();
+            }catch (SQLException ex)
+            {
+                logger.info("CLosing connection error");
+                ex.printStackTrace();
+            }
+        }
+    }
+
+    @Override
     public void deleteRole(User user,Roles role) {
         final String sql="DELETE  FROM user_roles WHERE user_id=? AND roles=?;";
 

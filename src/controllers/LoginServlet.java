@@ -1,19 +1,15 @@
 package controllers;
 
-import dal.UserDAOImpl;
-import dal.UserRolesDAOImpl;
-import entities.Roles;
 import entities.User;
+import filters.SHA1;
 import services.UserService;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import java.util.logging.Logger;
 
 @WebServlet(name = "login" ,urlPatterns ="/login")
@@ -28,55 +24,56 @@ public class LoginServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String email = request.getParameter("email");
-        String password = request.getParameter("password");
-        String errorMsg = null;
-        User user=null;
-        logger.info("Context path: "+request.getContextPath());
-        logger.info("Servlet path"+request.getServletPath());
-        logger.info("URI: "+request.getRequestURI());
+        synchronized (this) {
+            String email = request.getParameter("email");
+            String password = request.getParameter("password");
+            String errorMsg = null;
+            User user = null;
 
-        if (email == null || email.equals("")) {
-            errorMsg = "User Email can't be null or empty";
-        }
-        if (password == null || password.equals("")) {
-            errorMsg = "Password can't be null or empty";
-        }
+            logger.info("URI: " + request.getRequestURI());
 
-        if (errorMsg != null) {
-            RequestDispatcher rd = getServletContext().getRequestDispatcher("/login.jsp");
-            PrintWriter out = response.getWriter();
-            out.println("<font color=red>" + errorMsg + "</font>");
-            rd.include(request, response);
+            if (email == null || email.equals("")) {
+                errorMsg = "User Email can't be null or empty";
+            }
+            if (password == null || password.equals("")) {
+                errorMsg = "Password can't be null or empty";
+            }
 
-        }
-        else
-        {
-            if((user=userService.findByEmailAndPassword(email,password))!=null)
-            {
-                user.setRolesList(userService.getUserRoles(user));
-                logger.info("User found with details="+user);
-                HttpSession session = request.getSession();
-                session.setAttribute("User", user);
-                session.setMaxInactiveInterval(30*60);
+            if (errorMsg != null) {
+                RequestDispatcher rd = getServletContext().getRequestDispatcher("/login.jsp");
+                PrintWriter out = response.getWriter();
+                out.println("<font color=red>" + errorMsg + "</font>");
+                rd.include(request, response);
 
-                Cookie loginCookie = new Cookie("user_cookie",user.getNickname());
-                loginCookie.setMaxAge(30*60);
-                response.addCookie(loginCookie);
-                response.sendRedirect("/home.jsp");
-            }else
-            {
-                RequestDispatcher requestDispatcher=getServletContext().getRequestDispatcher("/login.jsp");
-                PrintWriter out= response.getWriter();
-                logger.warning("User not found with email="+email);
-                out.println("<font color=red>No user found with given email id, please register first. </font>");
-                requestDispatcher.include(request, response);
+            } else {
+                SHA1 sha1 = new SHA1();
+                logger.info("tank85943221: " + sha1.hash("tank85943221"));
+                if ((user = userService.findByEmailAndPassword(email, sha1.hash(password))) != null) {
+                    user.setRolesList(userService.getUserRoles(user));
+                    user.setActive(true);
+                    userService.updateUser(user);
+                    logger.info("User found with details=" + user);
+                    HttpSession session = request.getSession();
+                    session.setAttribute("User", user);
+                    session.setMaxInactiveInterval(30 * 60);
+
+                    Cookie loginCookie = new Cookie("user_cookie", user.getNickname());
+                    loginCookie.setMaxAge(30 * 60);
+                    response.addCookie(loginCookie);
+                    response.sendRedirect("/home");
+                } else {
+                    RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/login.jsp");
+                    PrintWriter out = response.getWriter();
+                    logger.warning("User not found with email=" + email);
+                    out.println("<font color=red>No user found with given email id, please register first. </font>");
+                    requestDispatcher.include(request, response);
+                }
             }
         }
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher(request.getContextPath()+"/login.jsp");
+        RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/login.jsp");
 
         dispatcher.forward(request, response);
     }

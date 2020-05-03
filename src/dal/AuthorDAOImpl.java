@@ -15,7 +15,49 @@ import java.util.logging.Logger;
 
 public class AuthorDAOImpl implements AuthorDAO {
 
+    private static int counter=0;
     private Logger logger=Logger.getLogger(AuthorDAOImpl.class.toString());
+
+    @Override
+    public boolean isAuthorExist(int userID) {
+        Connection connection=null;
+        PreparedStatement statement=null;
+        ResultSet resultSet=null;
+
+        final String sql="SELECT * FROM author WHERE user_id=?;";
+        try {
+            connection=ConnectionFactory.getConnection();
+            try{
+                statement=connection.prepareStatement(sql);
+                statement.setInt(1,userID);
+                resultSet=statement.executeQuery();
+                if(resultSet.next())
+                {
+                    return true;
+                }
+            }catch (SQLException ex)
+            {
+                ex.printStackTrace();
+            }finally {
+                try{
+                    statement.close();
+                }catch (SQLException ex)
+                {
+                    ex.printStackTrace();
+                }
+            }
+        }
+        finally {
+            try{
+                logger.info("CLosing connection");
+                connection.close();
+            }catch (SQLException ex)
+            {
+                ex.printStackTrace();
+            }
+        }
+        return false;
+    }
 
     @Override
     public List<Post> getAllPublicationsByAuthorId(int id) {
@@ -132,8 +174,6 @@ public class AuthorDAOImpl implements AuthorDAO {
 
         Connection connection=null;
         PreparedStatement statement=null;
-        ResultSet resultSet=null;
-
         final String sql ="INSERT INTO author(user_id,num_publications,name,surname)" +
                 " VALUES(?,?,?,?);";
 
@@ -143,13 +183,14 @@ public class AuthorDAOImpl implements AuthorDAO {
 
                 try
                 {
+                    ++counter;
+                    logger.info("COUNTER= "+counter);
                     statement=connection.prepareStatement(sql);
                     statement.setInt(1,user.getId());
                     statement.setInt(2,0);
                     statement.setString(3,name);
                     statement.setString(4,surname);
-                    statement.execute();
-                    int result =statement.executeUpdate();
+                    int result=statement.executeUpdate();
                     if(result==1)
                     {
                         logger.info("Author with name: "+
@@ -187,21 +228,20 @@ public class AuthorDAOImpl implements AuthorDAO {
     }
 
     @Override
-    public boolean deleteAuthor(int id) {
+    public boolean deleteAuthorByUserId(int id) {
 
         Connection connection=null;
         PreparedStatement statement=null;
 
-        final String sql = "DELETE author,publication " +
-                "FROM author INNER JOIN publication  ON publication.author_id =author.author_id" +
-                " WHERE author.author_id=?;";
+//        final String sql = "DELETE author,publication " +
+//                "FROM author INNER JOIN publication  ON publication.author_id =author.author_id" +
+//                " WHERE author.author_id=?;";
 
-
+        final String sql ="DELETE FROM author WHERE user_id=?;";
 
         try {
                 logger.info("Creating connection!");
                 connection=ConnectionFactory.getConnection();
-
                     try {
                         logger.info("Creating statement!");
                         statement=connection.prepareStatement(sql);
@@ -289,14 +329,14 @@ public class AuthorDAOImpl implements AuthorDAO {
     }
 
     @Override
-    public Author getAuthorById(int id) {
+    public Author getAuthorByUserId(int id) {
 
         Connection connection=null;
         PreparedStatement statement=null;
         ResultSet resultSet=null;
         Author author=null;
 
-        final String sql="SELECT * FROM author WHERE author_id=?;";
+        final String sql="SELECT * FROM author WHERE user_id=?;";
 
             try {
                 logger.info("Opening connection!");
@@ -305,11 +345,10 @@ public class AuthorDAOImpl implements AuthorDAO {
                         logger.info("Creating statement");
                         statement=connection.prepareStatement(sql);
                         statement.setInt(1,id);
-                        statement.execute();
                         resultSet=statement.executeQuery();
-                        if((author=extractAuthorFromResultSet(resultSet))!=null)
+                        if(resultSet.next())
                         {
-                            return author;
+                            return (author=extractAuthorFromResultSet(resultSet));
                         }
                     }catch (SQLException ex)
                     {
@@ -325,7 +364,8 @@ public class AuthorDAOImpl implements AuthorDAO {
                         }
                     }
 
-            }finally {
+            }
+            finally {
                 try{
                     logger.info("Closing connection");
                     connection.close();

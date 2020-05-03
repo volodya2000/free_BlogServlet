@@ -14,11 +14,12 @@ public  class ConnectionFactory {
     private final static String dbPwd = "root";
 
     public static ConnectionFactory getInstance()
-    {
-        return new ConnectionFactory() ;
-    }
+        {
+            return new ConnectionFactory() ;
+        }
 
-    public static   Connection getConnection() {
+  //  private static ConnectionFactory instance=null;
+  public static   Connection getConnection() {
         Connection connection = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -31,5 +32,26 @@ public  class ConnectionFactory {
         }
         return connection;
     }
+
+//    private ConnectionFactory() {
+//        try {
+//            Class.forName("com.mysql.jdbc.Driver");
+//        } catch (ClassNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//    }
+//
+//    public static ConnectionFactory getInstance() {
+//        if (instance == null) {
+//            instance = new ConnectionFactory();
+//        }
+//        return instance;
+//    }
+//
+//    public Connection getConnection() throws SQLException, ClassNotFoundException {
+//
+//        Connection connection = DriverManager.getConnection(dbUrl, dbName, dbPwd);
+//        return connection;
+//    }
 
 }

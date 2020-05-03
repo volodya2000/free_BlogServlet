@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/freeBlog/freeBlog.iml" filepath="$PROJECT_DIR$/freeBlog/freeBlog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/freeBlogServlet/freeBlogServlet.iml" filepath="$PROJECT_DIR$/freeBlogServlet/freeBlogServlet.iml" />
       <module fileurl="file://$PROJECT_DIR$/free_BlogServlet.iml" filepath="$PROJECT_DIR$/free_BlogServlet.iml" />
     </modules>
   </component>

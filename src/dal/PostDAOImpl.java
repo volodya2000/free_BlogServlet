@@ -1,5 +1,6 @@
 package dal;
 
+import com.mysql.jdbc.Statement;
 import entities.Author;
 import entities.Post;
 
@@ -32,10 +33,11 @@ public class PostDAOImpl implements PostDAO {
                         logger.info("Creating statement!");
                         statement=connection.prepareStatement(sql);
                         statement.setInt(1,id);
-                        statement.execute();
+                        //statement.execute();
                         resultSet=statement.executeQuery();
-                        if((post=extractPostFromResultSet(resultSet))!=null)
+                        if(resultSet.next())
                         {
+                            post=extractPostFromResultSet(resultSet);
                             return post;
                         }
                     }catch (SQLException ex)
@@ -71,19 +73,30 @@ public class PostDAOImpl implements PostDAO {
 
         Connection connection=null;
         PreparedStatement statement=null;
-
-        final String sql ="INSERT INTO post (post_id,post_name) " +
-                "values(?,?);";
+        ResultSet resultSet=null;
+        final String sql ="INSERT INTO post (post_name,information,description,image_source) " +
+                "values(?,?,?,?);";
 
         try {
             logger.info("Opening connection!");
             connection=ConnectionFactory.getConnection();
                 try {
                     logger.info("Creating statement");
-                    statement=connection.prepareStatement(sql);
-                    statement.setInt(1,post.getId());
-                    statement.setString(2,post.getNameOfPost());
+                    statement= connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+                    statement.setString(1,post.getNameOfPost());
+                    statement.setString(2,post.getInformation());
+                    statement.setString(3,post.getDescription());
+                    statement.setString(4,post.getImageSource());
                     int result = statement.executeUpdate();
+                    try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
+                        if (generatedKeys.next()) {
+                            post.setId(generatedKeys.getInt(1));
+                            logger.warning("USER ID == "+post.getId());
+                        }
+                        else {
+                            throw new SQLException("Creating user failed, no ID obtained.");
+                        }
+                    }
                     if(result==1)
                     {
                         return true;
@@ -204,6 +217,101 @@ public class PostDAOImpl implements PostDAO {
     }
 
     @Override
+    public int numberOfPost() {
+        int number=0;
+        Connection connection=null;
+        PreparedStatement statement=null;
+        final String sql="SELECT COUNT(post_id) FROM post;";
+
+        try{
+            logger.info("Opening connection");
+            connection=ConnectionFactory.getConnection();
+            try{
+                logger.info("Creating statement");
+                statement=connection.prepareStatement(sql);
+                number=statement.executeUpdate();
+            }catch (SQLException ex)
+            {
+                ex.printStackTrace();
+            }finally {
+                try{
+                    logger.info("Closing statement");
+                    statement.close();
+                }catch (SQLException ex)
+                {
+                    logger.info("Closing statement error");
+                    ex.printStackTrace();
+                }
+            }
+        }finally {
+            try{
+                logger.info("Closing connection");
+                connection.close();
+            }catch (SQLException ex)
+            {
+                logger.info("Closing connetion error");
+                ex.printStackTrace();
+            }
+        }
+
+        return number;
+    }
+
+    @Override
+    public List<Post> findPosts(int currentPage, int recordsPerPage) {
+        List<Post> posts=new ArrayList<>();
+        Connection connection=null;
+        PreparedStatement statement=null;
+        ResultSet resultSet=null;
+        final String sql="SELECT * FROM post LIMIT ?,?;";
+        int start=0;
+        if(currentPage!=1)
+        {
+            start=currentPage*recordsPerPage-recordsPerPage +1;
+        }
+
+        try{
+            connection=ConnectionFactory.getConnection();
+            try{
+                statement=connection.prepareStatement(sql);
+                statement.setInt(1,start);
+                statement.setInt(2,recordsPerPage);
+                resultSet=statement.executeQuery();
+                while(resultSet.next())
+                {
+                    posts.add(extractPostFromResultSet(resultSet));
+                }
+                return posts;
+            }catch (SQLException ex)
+            {
+                ex.printStackTrace();
+            }finally {
+                try{
+                    logger.info("Closing statement");
+                    statement.close();
+                }catch (SQLException ex)
+                {
+                    logger.info("Closing statement error");
+                    ex.printStackTrace();
+                }
+            }
+        }finally {
+            try{
+                logger.info("Closing connection");
+                connection.close();
+            }catch (SQLException ex)
+            {
+                logger.info("Closing connection error");
+                ex.printStackTrace();
+            }
+        }
+
+
+
+        return null;
+    }
+
+    @Override
     public List<Post> getAll() {
 
         List<Post>posts = new ArrayList<>();
@@ -248,6 +356,56 @@ public class PostDAOImpl implements PostDAO {
                     ex.printStackTrace();
                 }
             }
+
+        return null;
+    }
+
+    @Override
+    public List<Post> getPostByName(String name) {
+        Connection connection=null;
+        PreparedStatement statement=null;
+        ResultSet resultSet=null;
+        List<Post>posts= new ArrayList<>();
+
+        final String sql="SELECT * FROM post WHERE post_name LIKE ?;";
+
+        try {
+            logger.info("Opening connection!");
+            connection=ConnectionFactory.getConnection();
+            name="%"+name+"%";
+            try{
+                statement=connection.prepareStatement(sql);
+                statement.setString(1,name);
+                statement.execute();
+                resultSet=statement.executeQuery();
+                while(resultSet.next())
+                {
+                    posts.add(extractPostFromResultSet(resultSet));
+                }
+                return posts;
+            }catch (SQLException ex)
+            {
+                ex.printStackTrace();
+            }finally {
+                try{
+                    logger.info("Closing statement!");
+                    statement.close();
+                }catch (SQLException ex)
+                {
+                    logger.info("Closing statement error!");
+                    ex.printStackTrace();
+                }
+            }
+        }finally {
+            try {
+                logger.info("Closing connection");
+                connection.close();
+            }catch (SQLException ex)
+            {
+                logger.info("Closing connection error!");
+                ex.printStackTrace();
+            }
+        }
 
         return null;
     }
@@ -327,6 +485,11 @@ public class PostDAOImpl implements PostDAO {
             Post post = new Post();
             post.setId(rs.getInt("post_id"));
             post.setNameOfPost(rs.getString("post_name"));
+            post.setInformation(rs.getString("information"));
+            //post.setDate(rs.getDate("date_of_creation"));
+            post.setDate(rs.getTimestamp("date_of_creation"));
+            post.setDescription(rs.getString("description"));
+            post.setImageSource(rs.getString("image_source"));
             return post;
         }catch (SQLException ex)
         {

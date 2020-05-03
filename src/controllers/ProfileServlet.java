@@ -22,23 +22,25 @@ public class ProfileServlet extends HttpServlet {
         private static Logger logger=Logger.getLogger(ProfileServlet.class.toString());
 
         protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            User user;
-            String nickname=request.getParameter("user");
-            logger.info("nickname= "+nickname);
-            if((user=userService.findUserByNickname(nickname))!=null)
-            {
-                request.setAttribute("findUser",user);
-                getServletContext().setAttribute("find_user",user);
-                RequestDispatcher rd=getServletContext().getRequestDispatcher("/adminPage.jsp");
-                rd.forward(request,response);
-            }else {
-                PrintWriter pw=response.getWriter();
-                pw.print("<p>User does not exist!</p>");
-                RequestDispatcher rd=getServletContext().getRequestDispatcher("/adminPage.jsp");
-                rd.include(request,response);
-                }
-    }
 
+            synchronized (this) {
+                User user;
+                String nickname = request.getParameter("user");
+                logger.info("nickname= " + nickname);
+                user = userService.findUserByNickname(nickname);
+                if (user != null) {
+                    request.setAttribute("findUser", user);
+                    getServletContext().setAttribute("find_user", user);
+                    RequestDispatcher rd = getServletContext().getRequestDispatcher("/adminPage.jsp");
+                    rd.forward(request, response);
+                } else {
+                    PrintWriter pw = response.getWriter();
+                    pw.print("<p>User does not exist!</p>");
+                    RequestDispatcher rd = getServletContext().getRequestDispatcher("/adminPage.jsp");
+                    rd.include(request, response);
+                }
+            }
+        }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         User user = (User)request.getSession(false).getAttribute("User");
         List<Roles> roles = user.getRolesList();
@@ -49,7 +51,13 @@ public class ProfileServlet extends HttpServlet {
             url="/adminPage.jsp";
         }
         else{
-            url="/userPage.jsp";
+            if(roles.contains(Roles.MODERATOR))
+            {
+                url="/moderatorPage.jsp";
+            }
+            else{
+                url="/userPage.jsp" ;
+            }
         }
         RequestDispatcher rd=getServletContext().getRequestDispatcher(url);
         rd.forward(request,response);
